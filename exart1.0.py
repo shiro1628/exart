@@ -391,6 +391,10 @@ def main():
     output_file = 'shimcache.txt'  # arg
     do_local = True
 
+    ############################
+    # parameter init setting end.
+    ############################
+
     # memdump(osarch)  # memory dump
     # ahnreportexe(osarch) # ahnreport execute
 
@@ -448,18 +452,20 @@ def main():
                 continue
 
     # NTFS filesystem carving
+    """
     if getlogfile == '1':
         print("[+] Collect NTFS FILE SYSTEM MFT , USNJRNL , LOGFILE")
         try:
             copy_ntfs(getlogfile)
         except Exception as err:
-            print('  [*] ', str(err).encode('UTF-8'))
+            print('  [*] ', str(err).encode('utf-8'))
     else:
         print("[+] Collect  NTFS FILE SYSTEM MFT")
         try:
             copy_ntfs(getlogfile)
         except Exception as err:
-            print('  [*] ', str(err).encode('UTF-8'))
+            print('  [*] ', str(err).encode('utf-8'))
+    """
 
     print(
         "[+] Collect Registry , Prefetch , Eventlog , browser history , etc folder")
@@ -496,10 +502,91 @@ def main():
     execute_utils(
         'utils\\MozillaCacheView.exe /copycache "" "" /CopyFilesFolder artifacts\\webcache\\cache-mozilla /UseWebSiteDirStructure 0')
 
+    print("[+] collect superfetch")
+    if osarch == '1':
+        execute_utils('utils\\crowdresponse.exe @superfetch > superfetch.xml')
+    else:
+        execute_utils(
+            'utils\\crowdresponse64.exe @superfetch > superfetch.xml')
+    execute_utils('utils\\crconvert.exe -f superfetch.xml -t')
 
-############################
-# parameter init setting end.
-############################
+    print("[+] Dumping Shim Cache data from the current system")
+    execute_utils('shimcacheparser.exe -l -o shimcache.txt')
+    cantcopyfiles = open('failed_copy_file_list.txt', 'w')
+
+    print("[+] collect shimcache log")
+
+    if os.path.isfile('shimcache.txt') == True:
+        f = open('shimcache.txt', 'r')
+        for i in f.readlines():
+            try:
+                i = i.decode('cp949').split(',')[2]
+                i = i.replace('SYSVOL', 'c:').replace('\\??\\', '')
+                replace_fname = i.replace(':', ';').replace(
+                    ' ', '').replace('\\', '_')
+                if i == 'Path':
+                    continue
+                if os.path.isfile('.\\artifacts\\collect_executed_files\\', replace_fname):
+                    continue
+                print(' [-] copying "%s"' % i)
+                if os.path.getsize(i.encode('cp949')) / (1024*1024) > 20:
+                    print(' [-] Exception - file size greater than 20MB : "%s"' %
+                          (i.encode('cp949')))
+                    cantcopyfiles.write(
+                        ' [-] Exception - file size greater than 20MB : ' + ' - ' + i.encode('cp949') + '\n')
+                    continue
+                try:
+                    if i.find('exart') == -1:
+                        shutil.copy(i, 'artifacts\\collect_executed_files\\%s' % i.replace(
+                            ':', ';').replace(' ', '').replace('\\', '_'))
+                except Exception as err:
+                    print('  [*] ', str(err).encode('cp949'))
+                    print('[+] Copying Error')
+                    continue
+
+            except Exception as err:
+                print('  [*] ', str(err).encode('cp949'))
+                continue
+        f.close()
+    else:
+        print(" [-] shimcache.txt not found")
+
+    print("[+] collect executed log")
+    execute_utils(
+        'utils\\ExecutedProgramsList.exe /scomma .\\utils\\executedlist.txt')
+    if os.path.isfile('.\\utils\\executedlist.txt') == True:
+        f = open('.\\utils\\executedlist.txt', 'rb')
+        for i in f.readlines():
+            try:
+                # 한글 처리 문제
+                i = i.decode('cp949').split(',')[0]
+                replace_fname = i.replace(':', ';').replace(
+                    ' ', '').replace('\\', '_').replace('\n', '')
+                replace_fname = replace_fname.replace(
+                    '.ApplicationCompany', '').replace('.FriendlyAppName', '')
+
+                if i.find('Executed File') > -1:
+                    continue
+                if os.path.isfile('.\\artifacts\\collect_executed_files\\' + replace_fname):
+                    continue
+                print(' [-] copying "%s"' % i)
+                if os.path.getsize(i) / (1024*1024) > 20:
+                    print(
+                        ' [-] Exception - file size greater than 20MB : "%s"' % (i.encode('cp949')))
+                    cantcopyfiles.write(
+                        "[-] Exception - file size greater than 20MB" + ' - ' + i + '\n')
+                    continue
+                if i.find('exart') == -1:
+                    shutil.copy(i, 'artifacts\\collect_executed_files\\%s' % i.replace(
+                        ':', '_').replace(' ', '').replace('\\', '_'))
+                    os.rename('.\\artifacts\\collect_executed_files\\%s' % i.split(
+                        '\\')[-1], '.\\artifacts\\collect_executed_files\\%s' % replace_fname)
+            except Exception as err:
+                print('  [*] ', str(err).encode('cp949'))
+                continue
+        f.close()
+    else:
+        print(" [-] executedlist.txt not found")
 
 
 if __name__ == "__main__":

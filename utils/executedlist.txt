@@ -1,0 +1,325 @@
+Executed File,File Last Modified,File Created On,File Size,File Attributes,Product Name,Product Version,File Description,File Version,Company Name,Last Executed On
+C:\Dev\line_exart\utils\AhnRpt_x64.exe,2014-08-13 오전 7:49:00,2022-07-08 오전 7:07:30,"966,720",A,AhnReport,6.54.045.2 (Build 0253.x64p),AhnReport,6.54.045.0253 (x64p),"AhnLab, Inc.",
+C:\Dev\line_exart\utils\DumpIt.exe,2011-05-03 오전 5:41:58,2022-07-08 오전 7:07:30,"207,496",A,,,,,,
+C:\Dev\line_exart\utils\winpmem_mini_x64_rc2.exe,,,,,,,,,,
+C:\Dev\line_exart\utils\winpmem_mini_x86.exe,,,,,,,,,,
+C:\Dev\line_exart\utils\winpmemx64.exe,,,,,,,,,,
+C:\LINE Games\Launcher\FLOORLauncherUnInstaller.exe,,,,,,,,,,
+C:\LINE Games\Launcher\FloorPatcher.exe,,,,,,,,,,2022-07-01 오전 1:09:03
+C:\LINE GAMES\UNCHARTED WATERS ORIGIN\ENGINE\EXTRAS\REDIST\EN-US\UE4PREREQSETUP_X64.EXE,,,,,,,,,,2022-06-24 오전 6:28:26
+C:\LINE GAMES\UNCHARTED WATERS ORIGIN\UWO.EXE,,,,,,,,,,2022-06-24 오전 6:28:23
+C:\Program Files (x86)\3uTools\3uTools.exe,2022-07-15 오전 12:10:48,2022-06-13 오전 9:36:18,"12,583,088",A,3uTools,2.6.1.28,3uTools,2.6.1.28,"ShangHai ZhangZheng Network Technology Co., Ltd.",
+C:\PROGRAM FILES (X86)\3uTools\cache\sshtool\putty.exe,2022-06-20 오전 2:38:56,2022-06-20 오전 2:38:56,"1,096,080",A,PuTTY suite,Release 0.74,"SSH, Telnet and Rlogin client",Release 0.74 (with embedded help),Simon Tatham,2022-07-20 오전 7:24:49
+C:\PROGRAM FILES (X86)\3uTools\updater.exe,2021-02-03 오전 1:24:31,2022-06-13 오전 9:36:19,"1,188,824",A,3uUpdater,2.2.2.0,3uUpdater,2.2.2.0,"ShangHai ZhangZheng Network Technology Co., Ltd.",2022-07-15 오전 12:10:46
+C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe,2022-07-05 오전 4:34:18,2022-07-05 오전 4:34:18,"3,220,992",A,Adobe Acrobat Reader DC,22.1.20169.0,Adobe Acrobat Reader DC,22.1.20169.0,Adobe Systems Incorporated,
+C:\PROGRAM FILES (X86)\BIGFIX ENTERPRISE\BES CLIENT\X64ENVIRONMENT.EXE,2021-07-21 오전 4:01:08,2021-07-21 오전 4:01:08,"2,325,960",A,x64environment,10.0.4.32,x64 Environment Application,10.0.4.32,HCL Technologies Limited,2022-08-12 오전 6:07:58
+C:\PROGRAM FILES (X86)\COMMON FILES\Adobe\ARM\1.0\AdobeARM.exe,2021-11-17 오후 2:40:34,2021-11-17 오후 2:40:34,"1,564,424",A,Adobe Reader and Acrobat Manager,1.824.45.8876,Adobe Reader and Acrobat Manager,1.824.45.8876,Adobe Inc.,2022-08-12 오전 5:43:41
+C:\PROGRAM FILES (X86)\COMMON FILES\Adobe\ARM\1.0\ADOBEARMHELPER.EXE,2021-11-17 오후 2:40:34,2021-11-17 오후 2:40:34,"398,616",A,,1.824.45.8876,Adobe Reader and Acrobat Manager Helper,1.824.45.8876,Adobe Inc.,2022-08-12 오전 5:43:40
+C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\VSLauncher.exe,2021-07-03 오전 9:41:58,2021-07-03 오전 9:41:58,"281,536",A,Microsoft® Visual Studio®,16.0.31503.54,Microsoft Visual Studio Version Selector,16.0.31503.54 built by: D16.11,Microsoft Corporation,
+C:\PROGRAM FILES (X86)\COMMON FILES\Oracle\Java\JAVAPATH_TARGET_434593906\java.exe,2022-06-13 오전 8:08:15,2022-06-13 오전 8:08:19,"277,216",A,Java(TM) Platform SE 8,8.0.3210.7,Java(TM) Platform SE binary,8.0.3210.7,Oracle Corporation,2022-06-14 오전 9:33:22
+C:\Program Files (x86)\Common Files\Pulse Secure\JamUI\Pulse.exe,,,,,,,,,,2022-06-13 오전 4:59:03
+C:\PROGRAM FILES (X86)\Dell\UPDATESERVICE\Service\InvColPC.exe,2022-07-22 오전 6:17:19,2022-03-15 오후 5:23:50,"11,100,696",A,Inventory Collector,10.7.5,Dell Inventory Utility,10.7.5,Dell Inc.,2022-08-12 오전 3:40:59
+C:\program files (x86)\epic games\launcher\engine\binaries\win64\epicwebhelper.exe,2022-07-19 오후 1:18:34,2022-06-27 오전 1:05:20,"3,614,160",A,Unreal Engine,4.23.0,EpicWebHelper,,"Epic Games, Inc.",
+C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win64\EpicGamesLauncher.exe,2022-07-19 오후 1:18:35,2022-06-27 오전 1:05:21,"32,706,000",A,Unreal Engine,14.1.4-21150267+++Portal+Release-Live,EpicGamesLauncher,,"Epic Games, Inc.",
+C:\Program Files (x86)\Epic Games\Launcher\Portal\SelfUpdateStaging\Install\Portal\Extras\Redist\LauncherPrereqSetup_x64.exe,,,,,,,,,,2022-06-27 오전 1:06:21
+C:\PROGRAM FILES (X86)\Google\Update\GOOGLEUPDATE.EXE,2022-06-08 오전 7:16:09,2022-06-08 오전 7:16:11,"156,232",AT,Google 업데이트,1.3.36.101,Google 설치 프로그램,1.3.36.101,Google LLC,2022-08-12 오전 6:27:30
+C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe,2022-06-27 오전 5:21:08,2022-06-27 오전 5:21:08,"23,642,696",A,KakaoTalk,3.4.1.3152,KakaoTalk,3.4.1.3152,Kakao Corp.,
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe,2022-06-21 오전 1:44:38,2022-06-21 오전 1:39:14,"751,568",A,Microsoft® Visual Studio®,16.11.32602.291,Microsoft Visual Studio 2019,16.11.32602.291 built by: D16.11,Microsoft Corporation,2022-07-19 오전 12:49:26
+C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,2022-08-04 오후 5:26:32,2021-08-05 오후 10:41:46,"3,827,112",A,Microsoft Edge,104.0.1293.47,Microsoft Edge,104.0.1293.47,Microsoft Corporation,2022-07-21 오전 1:17:58
+C:\PROGRAM FILES (X86)\MICROSOFT\EDGEUPDATE\MICROSOFTEDGEUPDATE.EXE,2021-08-05 오후 10:41:06,2021-08-05 오후 10:41:46,"214,952",A,Microsoft Edge Update,1.3.147.37,Microsoft Edge Update,1.3.147.37,Microsoft Corporation,2022-08-12 오전 6:59:11
+C:\PROGRAM FILES (X86)\NETSARANG\Xftp 7\LIVEUPDATE.EXE,2021-09-15 오전 12:42:44,2021-09-15 오전 12:42:44,"490,512",A,TrueUpdate Client,3.8.1.0,TrueUpdate Client,3.8.1.0,Indigo Rose Corporation,2022-07-20 오전 7:16:33
+C:\Program Files (x86)\NetSarang\Xftp 7\Xftp.exe,2021-10-27 오전 9:59:12,2021-10-27 오전 9:59:12,"3,446,288",A,Xftp,"7,0,0,18",Xftp: Secure file transfer software for MS Windows Platform.,"7,0,0,18","NetSarang Computer, Inc.",2022-07-21 오전 6:42:55
+C:\Program Files (x86)\PicPick\picpick.exe,2022-05-17 오전 6:17:54,2022-05-17 오전 6:17:54,"30,945,056",A,PicPick,6.1.2.0,PicPick,6.1.2.0,NGWIN,2022-08-08 오전 3:31:25
+C:\PROGRAM FILES (X86)\PRIVACY-I\PIAgent.exe,2022-06-03 오전 4:37:40,2022-06-03 오전 4:37:40,"11,408,088",A,Privacy-i,6.0.11083.20220603,Privacy-i(Stable),6.0.11083.1201,Somansa,2022-08-08 오전 4:55:52
+C:\PROGRAM FILES (X86)\PRIVACY-I\PIAUTOSCAN.EXE,2022-06-08 오전 6:29:32,2022-06-08 오전 6:29:32,"6,418,136",A,Privacy-i,6.0.11048.20220526,Privacy-i(Stable),6.0.11048.286,Somansa,2022-08-12 오전 4:01:17
+C:\PROGRAM FILES (X86)\PRIVACY-I\PIMngCtr.exe,2022-05-19 오전 12:57:08,2022-05-19 오전 12:57:08,"7,181,528",A,Privacy-i,6.0.11010.20220519,Privacy-i(Stable),6.0.11010.371,Somansa,2022-08-12 오전 1:24:03
+C:\Program Files (x86)\Pulse Secure\Pulse\PulseUninstall.exe,,,,,,,,,,
+C:\PROGRAM FILES (X86)\SAFERZONE\SAFERZONE5\SZMSGRELAYALERT.EXE,2020-06-23 오전 12:26:30,2022-06-08 오전 7:21:20,"765,096",A,SaferZone V5 x86 PC Version,10.0.40219.1,SZMsgRelayAlert2,2019.8.27.96,SaferZone,2022-07-04 오전 8:56:51
+C:\Program Files (x86)\SaferZone\SaferZone5\UsrAuth.exe,2020-09-03 오전 1:14:56,2022-06-08 오전 7:21:21,"894,224",A,SaferZone V5 x86 PC Version,5.5.0.0,SaferZone Regist,2020.9.3.81,SaferZone,2022-08-07 오후 11:31:34
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\python27\TPython.exe,2022-06-08 오전 6:58:35,2022-06-08 오전 6:58:35,"185,160",A,Tanium Python,7.2.314.3636,Tanium python package runner,7.2.314.3636,Tanium Inc.,2022-08-12 오전 6:44:01
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\python38\TPython.exe,2022-06-08 오전 6:55:08,2022-06-08 오전 6:55:08,"264,520",A,Tanium Python,7.4.4.1147,Tanium python package runner,7.4.4.1147,Tanium Inc.,2022-08-12 오전 6:50:38
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\TANIUMCLIENT.EXE,2018-10-30 오후 4:58:26,2018-10-30 오후 4:58:26,"4,938,736",A,Tanium Client,7.2.314.3476,Tanium Client,7.2.314.3476,Tanium Inc.,2022-08-12 오전 6:59:09
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\TaniumCX.exe,2022-06-08 오전 7:00:42,2022-06-08 오전 6:52:58,"3,651,992",A,Tanium Client Extension Coordinator,2.4.1544.0,Tanium Client Extension Coordinator,2.4.1544.0,Tanium Inc.,2022-08-12 오전 7:04:44
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\Tools\Detect3\TANIUMDETECTENGINE.EXE,2022-06-08 오전 6:59:14,2022-06-08 오전 6:59:14,"18,445,640",A,TaniumDetectEngine Utility,3.18.15,Tanium Detect Evaluation Engine,3.18.15,Tanium Inc.,2022-08-12 오전 3:07:14
+C:\PROGRAM FILES (X86)\Tanium\TANIUM CLIENT\Tools\EPI\TANIUMENDPOINTINDEX.EXE,2022-06-08 오전 6:59:51,2022-06-08 오전 6:59:51,"12,459,848",A,Tanium Index,2.5.14.0002,Tanium Index,2.5.14.0002,Tanium Inc.,2022-08-12 오전 6:41:45
+C:\Program Files (x86)\VMware\VMware Player\vmplayer.exe,,,,,,,,,,
+C:\PROGRAM FILES (X86)\VMWARE\VMWARE PLAYER\VNETLIB64.EXE,,,,,,,,,,2022-07-01 오전 9:05:15
+C:\Program Files (x86)\Windows Media Player\wmplayer.exe,2022-03-03 오전 8:53:28,2022-03-03 오전 8:53:28,"166,912",A,Microsoft® Windows® Operating System,12.0.19041.1826,Windows Media Player,12.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Program Files\Android\Android Studio\bin\studio64.exe,2022-05-18 오후 1:58:20,2022-05-18 오후 1:58:20,"1,325,408",A,Android Studio,2021.2.0.AI-__BUILD__,Android Studio,2021.2.0.AI-__BUILD__,JetBrains s.r.o.,
+C:\Program Files\Bandizip\Bandizip.exe,2022-04-13 오전 5:08:21,2022-06-08 오전 6:43:08,"3,345,896",A,Bandizip,7.25.0.1,Bandizip,7.25.0.1,Bandisoft International Inc.,2022-08-11 오후 11:01:06
+C:\Program Files\Bandizip\data\RegDll.x64.exe,2022-04-08 오전 4:12:28,2022-06-08 오전 6:43:08,"201,200",A,,,,,,
+C:\PROGRAM FILES\Bandizip\data\REGPACKAGE.X86.EXE,2022-03-10 오전 8:23:00,2022-06-08 오전 6:43:08,"201,104",A,,,,,,2022-08-11 오후 11:01:06
+C:\PROGRAM FILES\Bandizip\data\web32.exe,2022-04-04 오전 6:33:03,2022-06-08 오전 6:43:08,"269,792",A,web32,1.0.0.1,Web32 web control process,1.0.0.1,Bandisoft.com,2022-08-11 오전 1:40:43
+C:\PROGRAM FILES\Bandizip\Updater.exe,2022-04-13 오전 2:22:52,2022-06-08 오전 6:43:08,"961,000",A,Bandizip Updater,7.25.0.1,Bandizip Updater,7.25.0.1,Bandisoft International Inc.,2022-08-11 오후 11:01:06
+C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeC2RClient.exe,2020-10-27 오전 7:55:00,2022-06-08 오전 6:34:14,"23,563,192",A,Microsoft Office,16.0.10368.20035,Microsoft Office Click-to-Run Client,16.0.10368.20035,Microsoft Corporation,
+C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe,2020-10-27 오전 7:55:04,2022-06-08 오전 6:34:14,"9,482,688",A,Microsoft Office,16.0.10368.20035,Microsoft Office Click-to-Run (SxS),16.0.10368.20035,Microsoft Corporation,2022-08-12 오전 7:02:54
+C:\Program Files\DB Browser for SQLite\DB Browser for SQLite.exe,2021-05-02 오전 8:13:26,2021-05-02 오전 8:13:26,"5,577,984",A,DB Browser for SQLite,3.12.2.20210502,DB Browser for SQLite,3.12.2.20210502,DB Browser for SQLite Team,2022-07-19 오전 5:46:29
+C:\Program Files\DigiDNA\iMazing\iMazing.exe,2022-06-13 오전 7:34:30,2022-06-28 오전 6:23:56,"4,309,264",A,iMazing,2.15.5.0,iMazing,2.15.5.0,DigiDNA,
+C:\program files\dnplayerext2\ldboxheadless.exe,2022-06-14 오전 12:44:47,2022-06-14 오전 12:44:47,"217,592",A,Oracle VM VirtualBox,5.1.4.110228,VirtualBox Headless Frontend,5.1.4.110228,Oracle Corporation,
+C:\PROGRAM FILES\Git\mingw64\bin\GITHUB.UI.EXE,2022-07-11 오전 9:51:42,2022-08-11 오전 7:27:17,"47,024",A,GitHub.UI,2.0.785+6074e4e3d3,GitHub.UI,2.0.785.29792,GitHub.UI,2022-08-11 오전 7:46:39
+C:\Program Files\Google\Chrome\Application\chrome.exe,2022-07-18 오후 8:00:48,2022-06-08 오전 7:16:42,"2,673,480",A,Google Chrome,103.0.5060.134,Google Chrome,103.0.5060.134,Google LLC,2022-08-12 오전 4:47:00
+C:\Program Files\HxD\HxD.exe,2021-02-10 오후 1:20:16,2022-06-15 오전 1:48:49,"6,888,960",A,HxD Hex Editor,2.5.0.0,HxD Hex Editor,2.5.0.0,Mael Horz,2022-08-11 오전 6:16:01
+C:\Program Files\IDA 7.1\ida.exe,2018-02-27 오전 3:13:48,2022-06-17 오전 6:42:56,"4,018,688",A,The Interactive Disassembler,7.1.18.0227,The Interactive Disassembler,7.1.18.0227,Hex-Rays SA,2022-07-04 오전 4:41:50
+C:\Program Files\IDA 7.1\ida64.exe,2018-02-27 오전 3:13:48,2022-06-17 오전 6:42:57,"4,011,008",A,The Interactive Disassembler,7.1.18.0227,The Interactive Disassembler,7.1.18.0227,Hex-Rays SA,2022-07-20 오전 7:18:18
+C:\Program Files\Internet Explorer\iexplore.exe,2022-03-03 오전 8:53:18,2022-03-03 오전 8:53:18,"834,512",A,Internet Explorer,11.00.19041.1,Internet Explorer,11.00.19041.1 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Program Files\iTunes\iTunes.exe,2022-05-05 오전 8:02:16,2022-05-05 오전 8:02:16,"39,196,744",A,iTunes,12.12.4.1,iTunes,12.12.4.1,Apple Inc.,
+C:\program files\java\jdk-11.0.15\bin\javaw.exe,2022-06-14 오전 9:32:31,2022-06-14 오전 9:32:31,"51,408",A,Java(TM) Platform SE 11.0.15,11.0.15.0,Java(TM) Platform SE binary,11.0.15.0,Oracle Corporation,2022-07-04 오전 2:38:25
+C:\PROGRAM FILES\Java\JRE1.8.0_321\bin\java.exe,2022-06-13 오전 8:08:15,2022-06-13 오전 8:08:15,"277,216",A,Java(TM) Platform SE 8,8.0.3210.7,Java(TM) Platform SE binary,8.0.3210.7,Oracle Corporation,2022-07-22 오전 6:44:59
+C:\Program Files\Java\jre1.8.0_321\bin\javaw.exe,2022-06-13 오전 8:08:15,2022-06-13 오전 8:08:15,"277,216",A,Java(TM) Platform SE 8,8.0.3210.7,Java(TM) Platform SE binary,8.0.3210.7,Oracle Corporation,
+C:\Program Files\Microsoft Office\Root\Office16\EXCEL.EXE,2022-06-08 오전 6:34:31,2022-06-08 오전 6:34:15,"53,319,064",A,Microsoft Office,16.0.10368.20035,Microsoft Excel,16.0.10368.20035,Microsoft Corporation,2022-08-12 오전 4:40:03
+C:\Program Files\Microsoft Office\Root\Office16\POWERPNT.EXE,2022-06-08 오전 6:34:31,2022-06-08 오전 6:34:31,"1,885,080",A,Microsoft Office,16.0.10368.20035,Microsoft PowerPoint,16.0.10368.20035,Microsoft Corporation,2022-06-30 오전 1:37:26
+C:\Program Files\Microsoft Office\root\Office16\Winword.exe,2022-06-08 오전 6:34:26,2022-06-08 오전 6:34:26,"1,960,344",A,Microsoft Office,16.0.10368.20035,Microsoft Word,16.0.10368.20035,Microsoft Corporation,2022-07-20 오전 7:49:48
+C:\Program Files\Notepad++\notepad++.exe,2022-01-19 오후 5:45:46,2022-01-19 오후 5:45:46,"6,062,504",A,Notepad++,8.21,Notepad++ : a free (GPL) source code editor,8.21,Don HO don.h@free.fr,2022-08-11 오전 8:03:57
+C:\PROGRAM FILES\NOTEPAD++\updater\GUP.exe,2022-01-19 오후 5:46:04,2022-01-19 오후 5:46:04,"968,616",A,WinGup for Notepad++,5.22,WinGup for Notepad++,5.22,Don HO don.h@free.fr,2022-08-11 오전 8:03:57
+C:\Program Files\Oracle\VirtualBox\VirtualBox.exe,,,,,,,,,,
+C:\program files\unity hub\unity hub.exe,2022-04-13 오후 2:41:54,2022-06-21 오전 1:32:55,"136,088,272",A,Unity Hub,3.1.2.0,Unity Hub,3.1.2,Unity Technologies Inc.,2022-08-11 오전 4:55:05
+C:\program files\unity\hub\editor\2019.4.40f1\editor\data\playbackengines\androidplayer\openjdk\bin\java.exe,2022-06-21 오전 1:39:30,2022-06-21 오전 1:39:30,"202,232",A,OpenJDK Platform 8,8.0.0.0,OpenJDK Platform binary,8.0.0.0,N/A,
+C:\Program Files\Windows NT\Accessories\WORDPAD.EXE,2022-06-08 오전 6:41:47,2022-06-08 오전 6:41:47,"3,059,712",A,Microsoft® Windows® Operating System,10.0.19041.1,Windows Wordpad Application,10.0.19041.1 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Program Files\WindowsApps\DellInc.DellCommandUpdate_4.5.36.0_x86__htrsf667h5kn2\DCU.Classic\DellCommandUpdate.exe,2022-06-08 오전 6:37:09,2022-06-08 오전 6:37:08,"2,300,176",A,Dell Command | Update,4.5.0.36,DCU.Classic,4.5.0.36,,2022-08-12 오전 3:41:10
+C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.MICROSOFTSTICKYNOTES_4.5.5.0_X64__8WEKYB3D8BBWE\MICROSOFT.NOTES.EXE,2022-06-23 오후 2:43:55,2022-06-23 오후 2:43:55,"23,040",A,Microsoft StickyNotes,4.5.5.0,Microsoft.Notes,4.5.5.0,Microsoft Corporation,2022-08-08 오전 12:51:00
+C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.XBOXGAMINGOVERLAY_5.722.5052.0_X64__8WEKYB3D8BBWE\GAMEBAR.EXE,,,,,,,,,,2022-07-15 오전 7:51:35
+C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.XBOXGAMINGOVERLAY_5.822.6271.0_X64__8WEKYB3D8BBWE\GameBar.exe,2022-07-20 오전 9:36:23,2022-07-20 오전 9:36:19,"28,257,280",A,Xbox Game Bar,5.822.06271.0,Xbox Game Bar,5.822.06271.0,Microsoft Corporation,2022-08-05 오전 7:23:29
+C:\Program Files\WindowsApps\Microsoft.YourPhone_1.22052.554.0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe,2022-07-26 오후 3:05:29,2022-07-26 오후 3:05:27,"496,552",A,Microsoft Your Phone,1.22052.554.0,PhoneExperienceHost,1.22052.554.0,Microsoft Corporation,
+C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.ZUNEVIDEO_10.22041.10091.0_X64__8WEKYB3D8BBWE\VIDEO.UI.EXE,2022-06-13 오전 6:39:07,2022-06-13 오전 6:39:04,"21,577,216",A,,,,,,2022-08-08 오전 12:59:12
+C:\PROGRAM FILES\WINDOWSAPPS\NVIDIACORP.NVIDIACONTROLPANEL_8.1.962.0_X64__56JYBVY8SCKQJ\nvcplui.exe,2022-06-08 오전 6:37:43,2022-06-08 오전 6:37:41,"14,119,632",A,NVIDIA Control Panel,8.1.940.0,"NVIDIA Control Panel Application, 8.1.940.0",8.1.940.0,NVIDIA Corporation,2022-08-08 오전 5:03:39
+C:\Program Files\WinRAR\WinRAR.exe,2022-03-03 오후 2:19:13,2022-06-28 오전 6:43:39,"2,459,288",A,WinRAR,6.11.0,WinRAR archiver,6.11.0,Alexander Roshal,2022-08-08 오전 5:38:09
+C:\Program Files\Wireshark\Wireshark.exe,2022-06-15 오후 5:16:30,2022-06-15 오후 5:16:30,"8,751,584",A,Wireshark,3.6.6,Wireshark,3.6.6,"The Wireshark developer community, https://www.wireshark.org/",
+C:\Program Files\WorksMobile\NCS Drive\ODrive.exe,2022-05-25 오전 3:02:18,2022-05-25 오전 3:02:18,"6,617,008",A,WEDrive Module,3.4.4.0042,WEDrive Module,3.4.4.0042,Works Mobile,2022-07-01 오전 1:11:45
+C:\Program Files\WorksMobile\NCS Drive\ODriveThumbnail.exe,2022-05-25 오전 3:03:06,2022-05-25 오전 3:03:06,"5,317,552",A,WEDriveThumbnail Module,1.2.2.174,WEDriveThumbnail Module,1.2.2.174,Works Mobile,
+C:\PROGRAM FILES\WORKSMOBILE\NCS DRIVE\ODSync.exe,2022-05-25 오전 3:02:52,2022-05-25 오전 3:02:52,"4,095,408",A,ODrive ODSync,1.2.2.184,ODrive ODSync,1.2.2.184,Works Mobile,2022-07-01 오전 5:01:57
+C:\PROGRAM FILES\WORKSMOBILE\NCS DRIVE\WMWEBENGINE.EXE,2022-05-20 오전 6:33:28,2022-05-20 오전 6:33:28,"1,410,888",A,,,,,,2022-07-04 오전 1:00:21
+C:\python27-x64\python.exe,2016-12-17 오전 11:55:02,2016-12-17 오전 11:55:02,"28,160",A,,,,,,
+C:\Users\AD01713091\AppData\Local\Android\Sdk\build-tools\33.0.0\zipalign.exe,2022-06-13 오전 8:19:06,2022-06-13 오전 8:19:06,"836,496",A,,,,,,
+C:\users\ad01713091\appdata\local\android\sdk\platform-tools\adb.exe,2022-06-13 오전 8:20:35,2022-06-13 오전 8:20:35,"5,989,376",A,,,,,,2022-08-11 오후 11:01:49
+C:\Users\AD01713091\AppData\Local\Kakao\KakaoTalk\KakaoUpdate.exe,2022-07-01 오전 5:53:15,2022-07-01 오전 5:53:15,"785,488",A,KakaoUpdate,1.1.0.72,KakaoUpdate,1.1.0.72,Kakao Corp.,2022-07-01 오전 5:53:18
+C:\Users\AD01713091\AppData\Local\LINE\bin\current\LINELAUNCHER.EXE,2022-08-08 오전 2:41:27,2022-08-08 오전 2:41:27,"1,806,576",A,LINE,1.0.0.22,LINE,1.0.0.22,LINE Corporation,2022-08-08 오전 4:56:20
+C:\Users\AD01713091\AppData\Local\LINE\bin\LineLauncher.exe,2022-08-08 오전 2:41:27,2022-06-08 오전 6:44:03,"1,806,576",A,LINE,1.0.0.22,LINE,1.0.0.22,LINE Corporation,2022-08-08 오전 4:56:12
+C:\Users\AD01713091\AppData\Local\LINE\bin\LINEUPDATER.EXE,2022-08-12 오전 5:00:42,2022-06-08 오전 6:44:10,"3,645,096",AH,LineUpdater,1.0.0.65,LineUpdater,1.0.0.65,LINE Corporation,2022-08-12 오전 5:00:42
+C:\Users\AD01713091\AppData\Local\LINE\Data\plugin\LineCall\1.0.0.505\LineCall.exe,2022-08-08 오전 4:56:43,2022-08-08 오전 4:56:43,"11,885,296",A,LineCall,1.0.0.505,LineCall,1.0.0.505,LINE Corporation,2022-08-11 오후 11:04:16
+C:\Users\AD01713091\AppData\Local\LINE\Data\plugin\LINEMEDIAPLAYER\1.2.0.428\LINEMEDIAPLAYER.EXE,2022-08-08 오전 4:56:41,2022-08-08 오전 4:56:41,"12,445,984",A,LineMediaPlayer,1.2.0.428,LineMediaPlayer,1.2.0.428,LINE Corporation,2022-08-12 오전 1:48:28
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\19.043.0304.0013\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\21.220.1024.0005\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\22.099.0508.0001\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\22.111.0522.0002\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\22.121.0605.0002\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\22.131.0619.0001\FileSyncConfig.exe,,,,,,,,,,
+C:\Users\AD01713091\AppData\Local\MICROSOFT\OneDrive\22.141.0703.0002\FILECOAUTH.EXE,2022-07-28 오전 11:19:14,2022-07-28 오전 11:19:14,"990,600",A,Microsoft OneDrive,22.141.0703.0002,Microsoft OneDriveFile Co-Authoring Executable,22.141.0703.0002,Microsoft Corporation,2022-08-12 오전 2:19:13
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\22.141.0703.0002\FileSyncConfig.exe,2022-07-28 오전 11:19:15,2022-07-28 오전 11:19:15,"764,304",A,Microsoft OneDrive,22.141.0703.0002,Microsoft OneDrive Configuration Application,22.141.0703.0002,Microsoft Corporation,
+C:\Users\AD01713091\AppData\Local\Microsoft\OneDrive\StandaloneUpdater\OneDriveSetup.exe,,,,,,,,,,
+C:\users\ad01713091\appdata\local\programs\burpsuitecommunity\burpsuitecommunity.exe,2022-06-10 오전 9:42:22,2022-06-13 오전 9:06:17,"504,408",A,Burp Suite Community Edition,2022.5.1,Burp Suite Community Edition,2022.5.1,PortSwigger Web Security,2022-07-05 오전 1:54:30
+C:\Users\AD01713091\AppData\Local\Programs\Fiddler\Fiddler.exe,2021-12-15 오전 7:15:42,2021-12-15 오전 7:15:42,"1,562,368",A,Fiddler,5.0.20211.51073,Fiddler,5.0.20211.51073,Progress Software Corporation,
+C:\Users\AD01713091\AppData\Local\Programs\Microsoft VS Code\Code.exe,2022-07-06 오후 8:56:12,2022-07-07 오후 6:05:51,"138,479,520",A,Visual Studio Code,1.69.0,Visual Studio Code,1.69.0,Microsoft Corporation,2022-08-08 오전 3:39:43
+C:\Users\AD01713091\AppData\Local\Programs\Python\Python39\python.exe,2022-01-17 오전 6:30:36,2022-01-17 오전 6:30:36,"102,288",A,Python,3.9.10,Python,3.9.10,Python Software Foundation,2022-08-12 오전 7:04:25
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-9TKC0.TMP\GIT-2.37.1-64-BIT.TMP,,,,,,,,,,2022-08-11 오전 7:27:03
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-AIT6K.TMP\WIN64OPENSSL_LIGHT-3_0_5.TMP,,,,,,,,,,2022-08-10 오후 11:15:35
+C:\Users\AD01713091\AppData\Local\Temp\is-BKF5B.tmp\CODESETUP-STABLE-DA76F93349A72022CA4670C1B84860304616AAA2.TMP,2022-08-08 오전 1:37:27,2022-08-08 오전 1:37:27,"2,629,016",A,Visual Studio Code,1.70.0,Setup/Uninstall,51.1052.0.0,Microsoft Corporation,2022-08-08 오전 1:37:27
+C:\Users\AD01713091\AppData\Local\Temp\is-BPMKL.tmp\CODESETUP-STABLE-3B889B090B5AD5793F524B5D1D39FDA662B96A2A.TMP,2022-07-21 오전 12:33:02,2022-07-21 오전 12:33:02,"2,629,024",,Visual Studio Code,1.69.2,Setup/Uninstall,51.1052.0.0,Microsoft Corporation,2022-07-21 오전 12:33:02
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-K1O55.TMP\GIT-2.37.1-64-BIT.TMP,,,,,,,,,,2022-08-11 오전 7:27:06
+C:\Users\AD01713091\AppData\Local\Temp\is-NJFBK.tmp\CODESETUP-STABLE-DA76F93349A72022CA4670C1B84860304616AAA2.TMP,2022-08-08 오전 3:40:15,2022-08-08 오전 3:40:15,"2,629,016",A,Visual Studio Code,1.70.0,Setup/Uninstall,51.1052.0.0,Microsoft Corporation,2022-08-08 오전 3:40:16
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-QH3R0.TMP\WIN64OPENSSL_LIGHT-3_0_5.TMP,,,,,,,,,,2022-08-10 오후 11:15:37
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-QNA07.TMP\IMAZING2FORWINDOWS.TMP,,,,,,,,,,2022-06-28 오전 6:23:25
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\IS-S2E0E.TMP\IMAZING2FORWINDOWS.TMP,,,,,,,,,,2022-06-28 오전 6:23:28
+C:\Users\AD01713091\AppData\Local\Temp\IXP000.TMP\dxwsetup.exe,,,,,,,,,,2022-08-08 오전 3:32:44
+C:\Users\AD01713091\AppData\Local\Temp\jre-8u341-windows-au.exe,2022-07-19 오후 4:43:58,2022-07-19 오후 4:43:57,"2,266,288",A,Java Platform SE 8 U341,8.0.3410.10,Java Platform SE binary,8.0.3410.10,Oracle Corporation,
+C:\Users\AD01713091\AppData\Local\Temp\{36DA6F6F-1FAB-4BAA-8F49-8D105A31C2D4}\Xftp-7.0.0088p.exe,,,,,,,,,,
+C:\USERS\AD01713091\APPDATA\LOCAL\TEMP\{E5DF3245-80CF-48E8-AE2F-22D4D2DDD805}~SETUP\VCREDIST_X86.EXE,,,,,,,,,,2022-07-01 오전 8:30:25
+C:\Users\AD01713091\AppData\Local\WorksMobile\WorksMobileOne\WMOneNCS.exe,2022-06-02 오전 2:15:58,2022-06-02 오전 2:15:58,"410,000",A,WORKS,3.4.2.4,WORKS,3.4.2.4,Works Mobile,2022-07-21 오후 8:16:28
+C:\Users\AD01713091\AppData\Local\WORKSMOBILE\WORKSMOBILEONE\WMWEBENGINE.EXE,2022-06-01 오전 6:06:30,2022-06-01 오전 6:06:30,"1,413,008",A,,,,,,2022-07-21 오후 8:16:30
+C:\Users\AD01713091\AppData\Roaming\Pulse Secure\PSAL\PulseApplicationLauncher.exe,2022-01-01 오후 11:42:10,2022-01-01 오후 11:42:10,"2,050,488",A,Pulse Secure Application Launcher,"9, 1, 14, 13525",Pulse Secure Application Launcher,"9, 1, 14, 13525","Pulse Secure, LLC",
+C:\Users\AD01713091\AppData\Roaming\Pulse Secure\Setup Client\uninstall.exe,2022-01-02 오후 4:42:22,2022-01-02 오후 4:42:22,"54,664",A,Pulse Secure Setup Client,,Pulse Secure Setup Client Uninstaller,9.1.14.13525,"Pulse Secure, LLC",
+C:\Users\AD01713091\Desktop\Intel-PCIe-Ethernet-Controller-Driver_XX4J1_WIN_25.5.0.0_A20.EXE,,,,,,,,,,
+C:\Users\AD01713091\Downloads\3uTools_v2.60.022_Setup.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\android-studio-2021.2.1.15-windows.exe,,,,,,,,,,2022-06-13 오전 8:17:49
+C:\Users\AD01713091\Downloads\AnySign_Installer.exe,,,,,,,,,,2022-07-01 오전 12:30:49
+C:\Users\AD01713091\Downloads\Docker Desktop Installer.exe,2022-07-04 오전 1:03:15,2022-07-04 오전 1:03:10,"519,811,968",A,Docker Desktop Installer,4.10.0.82025,Docker Desktop Installer,4.10.0.82025,Docker Inc.,
+C:\Users\AD01713091\Downloads\dxwebsetup.exe,2022-08-08 오전 2:14:41,2022-08-08 오전 2:14:40,"295,320",A,Microsoft® Windows® Operating System,9.29.1974.0,DirectX 9.0 Web setup,9.29.1974.0,Microsoft Corporation,
+C:\Users\AD01713091\Downloads\FLOORInstaller.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\Git-2.37.1-64-bit.exe,2022-08-11 오전 7:27:00,2022-08-11 오전 7:26:58,"49,381,480",A,Git,2.37.1,Git Setup,2.37.1.1,The Git Development Community,
+C:\Users\AD01713091\Downloads\HxDSetup\HxDSetup.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\nsa_agent_64bit_9.1r13.1.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\Privacy-i_Agent_v6.0\Privacy-i_Agent_v6.0_silent.exe,2022-07-07 오전 9:47:14,2022-07-22 오전 8:00:51,"62,562,832",A,Privacy-i Agent v6.0,6.0.0.373,K뱅크_PC방화벽사용  2022-07-07,6.0.0.373,SOMANSA,
+C:\Users\AD01713091\Downloads\ProcessExplorer (2)\procexp64.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\ProcessExplorer\procexp.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\ProcessExplorer\procexp64.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\python-3.9.10-amd64.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\sqlite-tools-win32-x86-3390000\sqlite-tools-win32-x86-3390000\sqlite3.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\VirtualBox-6.1.34a-150636-Win.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\VMware-player-12.5.7-5813279.exe,,,,,,,,,,
+C:\Users\AD01713091\Downloads\VMware-player-full-16.2.3-19376536.exe,,,,,,,,,,2022-07-01 오전 5:02:38
+C:\Users\AD01713091\Downloads\Win64OpenSSL_Light-3_0_5.exe,2022-08-10 오후 11:15:21,2022-08-10 오후 11:15:18,"4,758,875",A,OpenSSL Light (64-bit),,OpenSSL Light (64-bit) Setup,,OpenSSL Win64 Installer Team,
+C:\Users\AD01713091\Downloads\winpmem_mini_x64_rc2.exe,2022-07-08 오전 7:30:41,2022-07-08 오전 7:30:40,"527,640",A,,,,,,
+C:\Users\AD01713091\Downloads\winpmem_mini_x86.exe,2022-07-08 오전 7:31:02,2022-07-08 오전 7:31:02,"217,368",A,,,,,,
+C:\Users\AD01713091\Downloads\wkhtmltox-0.12.6-1.msvc2015-win64.exe,2022-08-10 오후 11:15:31,2022-08-10 오후 11:15:24,"27,972,327",A,wkhtmltox,,wkhtmltox 0.12.6-1,0.12.6-1,,2022-08-10 오후 11:15:55
+C:\Users\AD01713091\Downloads\Xshell-7.0.0090p.exe,,,,,,,,,,
+C:\Windows\Downloaded Program Files\PulseSetupClientCtrlUninstaller.exe,,,,,,,,,,
+C:\Windows\Downloaded Program Files\PulseSetupClientCtrlUninstaller64.exe,,,,,,,,,,
+C:\Windows\Explorer.exe,2022-07-18 오전 2:19:06,2022-07-18 오전 2:19:06,"5,126,776",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 탐색기,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-08 오전 2:19:23
+C:\Windows\IMMERSIVECONTROLPANEL\SYSTEMSETTINGS.EXE,2022-03-03 오전 8:53:23,2022-03-03 오전 8:53:23,"98,128",A,Microsoft® Windows® Operating System,10.0.19041.1826,설정,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-07-12 오전 7:13:22
+C:\Windows\Installer\{A4CD33CE-41A3-430E-9613-F5E415664D0D}\PIMngCtrIcon.exe,2019-03-05 오전 6:12:30,2019-03-05 오전 6:12:30,"284,160",A,,,,,,
+C:\Windows\MICROSOFT.NET\FRAMEWORK64\V4.0.30319\mscorsvw.exe,2022-03-03 오전 8:46:46,2022-03-03 오전 8:46:46,"151,984",A,Microsoft® .NET Framework,4.8.4320.0,.NET Runtime Optimization Service,4.8.4320.0 built by: NET48REL1LAST_C,Microsoft Corporation,2022-08-12 오전 7:02:33
+C:\Windows\MICROSOFT.NET\FRAMEWORK64\V4.0.30319\ngen.exe,2022-03-03 오전 8:46:46,2022-03-03 오전 8:46:46,"174,552",A,Microsoft® .NET Framework,4.8.4320.0,Microsoft Common Language Runtime native compiler,4.8.4320.0 built by: NET48REL1LAST_C,Microsoft Corporation,2022-08-12 오전 7:02:31
+C:\Windows\MICROSOFT.NET\FRAMEWORK64\V4.0.30319\ngentask.exe,2022-03-03 오전 8:46:46,2022-03-03 오전 8:46:46,"79,312",A,Microsoft® .NET Framework,4.8.4320.0,Microsoft .NET Framework optimization service,4.8.4320.0 built by: NET48REL1LAST_C,Microsoft Corporation,2022-08-12 오전 7:02:37
+C:\Windows\regedit.exe,2022-03-03 오전 8:52:52,2022-03-03 오전 8:52:52,"370,176",A,Microsoft® Windows® Operating System,10.0.19041.1826,레지스트리 편집기,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Windows\SERVICING\TRUSTEDINSTALLER.EXE,2022-06-08 오전 7:07:15,2022-06-08 오전 7:07:15,"192,336",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 모듈 설치 관리자,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:24
+C:\Windows\System32\ARP.EXE,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"22,528",A,Microsoft® Windows® Operating System,10.0.19041.1826,TCP/IP Arp 명령,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:51:02
+C:\WINDOWS\SYSTEM32\AUDIODG.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 오디오 장치 그래프 격리,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:51:56
+C:\Windows\System32\BACKGROUNDTASKHOST.EXE,2022-03-03 오전 8:52:36,2022-03-03 오전 8:52:36,"17,728",A,Microsoft® Windows® Operating System,10.0.19041.546,Background Task Host,10.0.19041.546 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 4:40:05
+C:\Windows\System32\BACKGROUNDTRANSFERHOST.EXE,2022-03-03 오전 8:52:31,2022-03-03 오전 8:52:31,"34,304",A,Microsoft® Windows® Operating System,10.0.19041.746,Download/Upload Host,10.0.19041.746 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 2:17:23
+C:\Windows\System32\BITSADMIN.EXE,2019-12-07 오전 9:09:22,2019-12-07 오전 9:09:22,"186,880",A,Microsoft® Windows® Operating System,7.8.19041.1826,BITS 관리 유틸리티,7.8.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:04:36
+C:\Windows\System32\chcp.com,2022-07-18 오전 2:19:41,2022-07-18 오전 2:19:41,"12,800",A,Microsoft® Windows® Operating System,10.0.19041.1806,Change CodePage Utility,10.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 2:41:01
+C:\Windows\System32\cmd.exe,2022-03-03 오전 8:52:37,2022-03-03 오전 8:52:37,"236,544",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 명령 처리기,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:04:33
+C:\WINDOWS\SYSTEM32\CONHOST.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,콘솔 창 호스트,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-06-08 오전 6:43:19
+C:\WINDOWS\SYSTEM32\CONSENT.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,관리 응용 프로그램에 대한 승인된 UI,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 3:06:04
+C:\Windows\System32\dllhost.exe,2022-03-03 오전 8:52:38,2022-03-03 오전 8:52:38,"19,256",A,Microsoft® Windows® Operating System,10.0.19041.546,COM Surrogate,10.0.19041.546 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 10:56:42
+C:\Windows\System32\DRIVERSTORE\FILEREPOSITORY\CUI_DCH.INF_AMD64_7208949846A9B9DC\igfxext.exe,2021-06-23 오후 5:10:04,2022-06-08 오전 6:38:01,"343,064",A,Intel(R) Common User Interface,6.15.100.9664,igfxext Module,6.15.100.9664,Intel Corporation,2022-08-12 오전 3:41:01
+C:\Windows\System32\DRIVERSTORE\FILEREPOSITORY\NVDD.INF_AMD64_2A92122D24F2D024\DBINSTALLER.EXE,2021-09-27 오전 6:23:40,2022-06-08 오전 6:36:28,"728,192",A,GPU Settings DBInstall Application,30.0.14.7141,DBInstall Application,30.0.14.7141,NVIDIA Corporation,2022-08-12 오전 3:31:16
+C:\WINDOWS\SYSTEM32\DRVINST.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1620,Driver Installation Module,10.0.19041.1620 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 3:41:01
+C:\WINDOWS\SYSTEM32\DSMUSERTASK.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,장치 설정 관리자 사용자 작업 처리기,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 10:58:06
+C:\Windows\system32\eventvwr.exe,2019-12-07 오전 9:10:00,2019-12-07 오전 9:10:00,"81,408",A,Microsoft® Windows® Operating System,10.0.19041.1826,Event Viewer Snapin Launcher,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Windows\System32\expand.exe,2019-12-07 오전 9:09:26,2019-12-07 오전 9:09:26,"53,248",A,Microsoft® Windows® Operating System,5.00,LZ 확장 유틸리티,5.00 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 3:41:06
+C:\Windows\System32\fsquirt.exe,2019-12-07 오전 9:09:22,2019-12-07 오전 9:09:22,"128,512",A,Microsoft® Windows® Operating System,10.0.19041.1826,,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Windows\System32\ipconfig.exe,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"29,184",A,Microsoft® Windows® Operating System,10.0.19041.1826,IP 구성 유틸리티,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:04:36
+C:\WINDOWS\SYSTEM32\LOGONUI.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1,Windows Logon User Interface Host,10.0.19041.1 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:01:27
+C:\Windows\System32\makecab.exe,2019-12-07 오전 9:09:25,2019-12-07 오전 9:09:25,"68,096",A,Microsoft® Windows® Operating System,5.00,Microsoft® Cabinet Maker,5.00 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:25
+C:\Windows\system32\mmc.exe,2022-07-18 오전 2:19:43,2022-07-18 오전 2:19:43,"1,435,648",A,Microsoft® Windows® Operating System,10.0.19041.1826,Microsoft Management Console,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-08 오전 2:19:32
+C:\WINDOWS\SYSTEM32\MOUSOCOREWORKER.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1806,MoUSO Core Worker Process,10.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:24
+C:\Windows\System32\msdt.exe,2022-06-22 오전 9:09:30,2022-06-22 오전 9:09:30,"387,584",A,Microsoft® Windows® Operating System,10.0.19041.1826,Microsoft 지원 진단 마법사,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-06-28 오전 2:01:17
+C:\Windows\System32\msiexec.exe,2019-12-07 오전 9:10:02,2019-12-07 오전 9:10:02,"59,904",A,Windows Installer - Unicode,5.0.19041.1826,Windows® installer,5.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-06-08 오전 6:37:58
+C:\Windows\system32\mspaint.exe,2019-12-06 오후 7:39:00,2019-12-07 오후 2:57:37,"743,424",A,Microsoft® Windows® Operating System,10.0.19041.1826,그림판,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Windows\System32\NETSTAT.EXE,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"32,768",A,Microsoft® Windows® Operating System,10.0.19041.1826,TCP/IP Netstat 명령,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 2:41:01
+C:\Windows\system32\NOTEPAD.EXE,2019-12-06 오후 7:40:00,2019-12-07 오후 2:57:42,"165,888",A,Microsoft® Windows® Operating System,10.0.19041.1826,메모장,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:55:43
+C:\Windows\system32\OpenWith.exe,2022-03-03 오전 8:52:44,2022-03-03 오전 8:52:44,"107,368",A,Microsoft® Windows® Operating System,10.0.19041.1826,앱 선택,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오전 7:30:38
+C:\WINDOWS\SYSTEM32\OPTIONALFEATURES.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 기능,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-07-04 오전 12:57:51
+C:\WINDOWS\SYSTEM32\PNPUTIL.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,"Microsoft PnP 유틸리티 - 드라이버 패키지의 추가, 삭제, 내보내기 및 열거를 수행하는 도구입니다.",10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 3:41:03
+C:\WINDOWS\SYSTEM32\QUSER.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,사용자 쿼리 유틸리티,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:54:01
+C:\Windows\System32\rundll32.exe,2022-03-03 오전 8:52:43,2022-03-03 오전 8:52:43,"61,440",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 호스트 프로세스(Rundll32),10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:25
+C:\WINDOWS\SYSTEM32\RUNTIMEBROKER.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.746,Runtime Broker,10.0.19041.746 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:01:28
+C:\WINDOWS\SYSTEM32\SAMSUNG\EASYSETUP\SAMSUNGDEXEASYSETUP.EXE,,,,,Samsung DeX EasySetup,"1, 0, 0, 8",Samsung DeX EasySetup,"1, 0, 0, 8","Samsung Electronics Co., Ltd.",2022-08-11 오후 10:56:47
+C:\Windows\System32\schtasks.exe,2022-03-03 오전 8:52:30,2022-03-03 오전 8:52:30,"187,904",A,Microsoft® Windows® Operating System,10.0.19041.1826,Task Scheduler Configuration Tool,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:54
+C:\Windows\System32\scrnsave.scr,2019-12-07 오전 9:09:13,2019-12-07 오전 9:09:13,"29,696",A,Microsoft® Windows® Operating System,10.0.19041.1826,Blank Screen Saver,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오전 1:08:55
+C:\Windows\System32\SEARCHFILTERHOST.EXE,2022-07-18 오전 2:19:26,2022-07-18 오전 2:19:26,"229,376",A,Windows® Search,7.0.19041.1806,Microsoft Windows Search Filter Host,7.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:55:43
+C:\Windows\System32\SEARCHPROTOCOLHOST.EXE,2022-07-18 오전 2:19:26,2022-07-18 오전 2:19:26,"340,992",A,Windows® Search,7.0.19041.1806,Microsoft Windows Search Protocol Host,7.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:55:43
+C:\WINDOWS\SYSTEM32\SIHCLIENT.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,SIH 클라이언트,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 9:31:19
+C:\WINDOWS\SYSTEM32\SMARTSCREEN.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Windows Defender SmartScreen,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:54
+C:\WINDOWS\SYSTEM32\SPPSVC.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Microsoft 소프트웨어 보호 플랫폼 서비스,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 4:54:02
+C:\Windows\System32\svchost.exe,2022-07-18 오전 2:19:29,2022-07-18 오전 2:19:29,"46,504",A,Microsoft® Windows® Operating System,10.0.19041.1826,Host Process for Windows Services,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 5:30:56
+C:\Windows\System32\SYSTEMINFO.EXE,2019-12-07 오전 9:10:05,2019-12-07 오전 9:10:05,"76,800",A,Microsoft® Windows® Operating System,10.0.19041.1826,시스템 정보 표시,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:04:34
+C:\Windows\System32\SYSTEMPROPERTIESADVANCED.EXE,2019-12-07 오전 9:09:13,2019-12-07 오전 9:09:13,"82,944",A,Microsoft® Windows® Operating System,10.0.19041.1826,고급 시스템 설정,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오전 1:41:22
+C:\WINDOWS\SYSTEM32\TASKHOSTW.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 작업을 위한 호스트 프로세스,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:25
+C:\WINDOWS\SYSTEM32\UPFC.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1,Updateability From SCM,10.0.19041.1 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 9:30:49
+C:\WINDOWS\SYSTEM32\VSSVC.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Microsoft(R) 볼륨 섀도 복사본 서비스,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 10:56:45
+C:\Windows\System32\wbem\WMIC.exe,2022-06-08 오전 7:07:16,2022-06-08 오전 7:07:16,"427,008",A,Microsoft® Windows® Operating System,10.0.19041.1826,WMI 명령줄 유틸리티,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 11:13:15
+C:\Windows\System32\wbem\WmiPrvSE.exe,2022-03-03 오전 8:52:31,2022-03-03 오전 8:52:31,"418,304",A,Microsoft® Windows® Operating System,10.0.19041.546,WMI Provider Host,10.0.19041.546 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:04:35
+C:\Windows\System32\WerFault.exe,2022-06-08 오전 6:41:33,2022-06-08 오전 6:41:33,"489,320",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 문제 보고,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-07-21 오전 3:09:14
+C:\Windows\system32\WFS.exe,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Microsoft  Windows Fax and Scan,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,2022-03-03 오전 8:53:27,2022-03-03 오전 8:53:27,"433,152",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows PowerShell,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 11:01:21
+C:\WINDOWS\SYSTEM32\WUAUCLT.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1806,Windows Update,10.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-11 오후 10:56:45
+C:\WINDOWS\SYSTEM32\WUDFHOST.EXE,,,,,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 드라이버 파운데이션 - 사용자 모드 드라이버 프레임워크 호스트 프로세스,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 1:55:53
+C:\Windows\SYSTEMAPPS\MICROSOFT.LOCKAPP_CW5N1H2TXYEWY\LockApp.exe,2022-06-08 오전 7:07:14,2022-06-08 오전 7:07:14,"3,596,648",A,Microsoft® Windows® Operating System,10.0.19041.1741,LockApp.exe,10.0.19041.1741 (WinBuild.160101.0800),Microsoft Corporation,2022-08-08 오전 3:40:25
+C:\Windows\SYSTEMAPPS\MICROSOFT.WINDOWS.APPREP.CHXAPP_CW5N1H2TXYEWY\CHXSMARTSCREEN.EXE,2022-03-03 오전 8:52:11,2022-03-03 오전 8:52:11,"369,480",A,Microsoft® Windows® Operating System,10.0.19041.423,CHXSmartScreen.exe,10.0.19041.423 (WinBuild.160101.0800),Microsoft Corporation,2022-07-06 오전 12:06:34
+C:\Windows\SYSTEMAPPS\MICROSOFT.WINDOWS.SEARCH_CW5N1H2TXYEWY\SEARCHAPP.EXE,2022-07-18 오전 2:19:53,2022-07-18 오전 2:19:53,"3,585,872",A,Microsoft® Windows® Operating System,10.0.19041.1806,Search application,10.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-07-18 오전 7:28:05
+C:\Windows\SYSTEMAPPS\MICROSOFT.WINDOWS.SECHEALTHUI_CW5N1H2TXYEWY\SECHEALTHUI.EXE,2022-06-08 오전 7:07:11,2022-06-08 오전 7:07:10,"5,218,304",A,Microsoft® Windows® Operating System,10.0.19041.1741,Windows Defender application,10.0.19041.1741 (WinBuild.160101.0800),Microsoft Corporation,2022-08-08 오전 3:28:35
+C:\Windows\SYSTEMAPPS\MICROSOFT.WINDOWS.STARTMENUEXPERIENCEHOST_CW5N1H2TXYEWY\STARTMENUEXPERIENCEHOST.EXE,2022-03-03 오전 8:52:06,2022-03-03 오전 8:52:06,"793,416",A,,,,,,2022-07-22 오전 8:07:57
+C:\Windows\SYSTEMAPPS\SHELLEXPERIENCEHOST_CW5N1H2TXYEWY\SHELLEXPERIENCEHOST.EXE,2022-06-08 오전 6:41:47,2022-06-08 오전 6:41:47,"1,663,344",A,Microsoft® Windows® Operating System,10.0.19041.1620,Windows Shell Experience Host,10.0.19041.1620 (WinBuild.160101.0800),Microsoft Corporation,2022-07-22 오전 8:07:58
+C:\Windows\SysWOW64\chcp.com,2022-07-18 오전 2:19:41,2022-07-18 오전 2:19:41,"12,800",A,Microsoft® Windows® Operating System,10.0.19041.1806,Change CodePage Utility,10.0.19041.1806 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:00:27
+C:\Windows\SysWOW64\cmd.exe,2022-03-03 오전 8:52:37,2022-03-03 오전 8:52:37,"236,544",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 명령 처리기,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:00:27
+C:\Windows\SysWOW64\cscript.exe,2022-03-03 오전 8:52:43,2022-03-03 오전 8:52:43,"144,896",A,Microsoft ® Windows Script Host,5.812.10240.16384,Microsoft ® Console Based Script Host,5.812.10240.16384,Microsoft Corporation,2022-08-12 오전 6:39:29
+C:\Windows\SysWOW64\dllhost.exe,2022-03-03 오전 8:52:38,2022-03-03 오전 8:52:38,"19,256",A,Microsoft® Windows® Operating System,10.0.19041.546,COM Surrogate,10.0.19041.546 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 3:06:03
+C:\Windows\SysWOW64\msiexec.exe,2019-12-07 오전 9:10:02,2019-12-07 오전 9:10:02,"59,904",A,Windows Installer - Unicode,5.0.19041.1826,Windows® installer,5.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 5:43:32
+C:\Windows\SysWOW64\net.exe,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"47,104",A,Microsoft® Windows® Operating System,10.0.19041.1,Net Command,10.0.19041.1 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:59:07
+C:\Windows\SysWOW64\net1.exe,2022-03-03 오전 8:52:58,2022-03-03 오전 8:52:58,"139,776",A,Microsoft® Windows® Operating System,10.0.19041.1466,Net Command,10.0.19041.1466 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 6:59:07
+C:\Windows\SysWOW64\netsh.exe,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"82,432",A,Microsoft® Windows® Operating System,10.0.19041.1826,네트워크 명령 셸,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:00:27
+C:\Windows\SysWOW64\NETSTAT.EXE,2019-12-07 오전 9:09:57,2019-12-07 오전 9:09:57,"32,768",A,Microsoft® Windows® Operating System,10.0.19041.1826,TCP/IP Netstat 명령,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:00:48
+C:\Windows\SysWOW64\notepad.exe,2019-12-06 오후 7:40:00,2019-12-07 오후 2:57:42,"165,888",A,Microsoft® Windows® Operating System,10.0.19041.1826,메모장,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-07-01 오전 5:57:36
+C:\Windows\SysWOW64\SecEdit.exe,2019-12-07 오전 9:09:32,2019-12-07 오전 9:09:32,"37,888",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows 보안 구성 편집기 명령 도구,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 4:50:00
+C:\Windows\SysWOW64\wbem\WmiPrvSE.exe,2022-03-03 오전 8:52:31,2022-03-03 오전 8:52:31,"418,304",A,Microsoft® Windows® Operating System,10.0.19041.546,WMI Provider Host,10.0.19041.546 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:45
+C:\Windows\SysWOW64\WINDOWSPOWERSHELL\v1.0\POWERSHELL.EXE,2022-03-03 오전 8:53:27,2022-03-03 오전 8:53:27,"433,152",A,Microsoft® Windows® Operating System,10.0.19041.1826,Windows PowerShell,10.0.19041.1826 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:00:12
+C:\WINDOWS\TEMP\HELPER\C9632CF058AE4321B6B0B5EA39B710FE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\DELL_DBUTILPACKAGEINSTALLER\DELL_DBUTILPACKAGEINSTALLER.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\DELL_EXCALIBUR\DELL_EXCALIBUR.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\DELL_THERMALCIC\DELL_THERMALPPKGINSTALLER.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\EXECUTABLES\APPUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\EXECUTABLES\DRVUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\EXECUTABLES\PNPUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\EXECUTABLES\SSDUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\EXECUTABLES\USBUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\HOSTMETADATA\NVMEHOSTMETADATA.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\INVCOL.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\LIBSMBIOS\SMBIOSINFO.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\NOVATEK\ROM_CHECK_AUX_TOOL.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\OSINV\OSINV.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\REGMSI\REG-MSI_INVENTORY.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\SALOMANDOCK\SALOMANDOCK.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\SCSI_ODD\SCSIUPDATE.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\INV46BC_TMP\TBT_DOCK_FIRMWARE\GETDOCKVER32W.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\THUNDERBOLT_REG\THUNDERBOLTREGMODULE.EXE,,,,,,,,,,2022-08-12 오전 3:41:01
+C:\WINDOWS\TEMP\INV46BC_TMP\THUNDERBOLT_REG\THUNDERBOLTZEROINV.EXE,,,,,,,,,,2022-08-12 오전 3:41:00
+C:\WINDOWS\TEMP\{48B78032-92A4-4C33-B5D7-7AA816113DBF}\.CR\VCREDIST_X86.EXE,,,,,,,,,,2022-07-01 오전 4:57:34
+C:\WINDOWS\TEMP\{96810784-2CDD-4A04-AA22-80F45779B0B4}\.CR\VCREDIST_X86.EXE,,,,,,,,,,2022-07-01 오전 2:17:06
+C:\Windows\WinSxS\AMD64_MICROSOFT-WINDOWS-SERVICINGSTACK_31BF3856AD364E35_10.0.19041.1790_NONE_7DF2AEC07CA10E81\TiWorker.exe,2022-05-10 오전 3:39:39,2022-07-18 오전 2:11:43,"269,672",A,Microsoft® Windows® Operating System,10.0.19041.1790,Windows Modules Installer Worker,10.0.19041.1790 (WinBuild.160101.0800),Microsoft Corporation,2022-08-12 오전 7:02:24
+C:\프로그램\1. 반디집.EXE,2020-08-25 오전 7:13:42,2022-06-08 오전 6:33:46,"262,536",A,,,,,,
+C:\프로그램\10. SAFE ZONE.exe,2021-07-19 오전 3:03:29,2022-06-08 오전 6:33:59,"111,336,264",A,SaferZone V5,5.5.0.0,SaferZone Installer,2021.4.9.25,SaferZone,
+C:\프로그램\2. ChromeSetup.exe,2021-09-24 오전 12:54:45,2022-06-08 오전 6:33:46,"1,342,296",A,Google Update,1.3.36.102,Google Update Setup,1.3.36.102,Google LLC,
+C:\프로그램\3. 라인메신저.exe,2021-02-24 오전 12:57:28,2022-06-08 오전 6:33:46,"99,112,832",A,LINE,6.6.0.2457,LINE,6.6.0.2457,LINE Corporation,
+C:\프로그램\4. WORKS 드라이브.exe,2021-08-18 오전 9:35:16,2022-06-08 오전 6:33:48,"20,941,184",A,LINE WORKS Drive,3.1.2.5,LINE WORKS Drive,3.1.2.5,(c) Works Mobile Corp.,
+C:\프로그램\5. 웍스 메신져.exe,2021-08-18 오전 9:35:16,2022-06-08 오전 6:33:49,"113,154,872",A,WORKS,,WMOneInst,3.1.1.35,Works Mobile Corp.,
+C:\프로그램\6. InstallTanium(Window).exe,2021-05-11 오후 4:33:14,2022-06-08 오전 6:33:52,"22,486,016",A,Internet Explorer,11.00.9600.16384,Win32 Cabinet Self-Extractor,11.00.9600.16384 (winblue_rtm.130821-1623),Microsoft Corporation,
+C:\프로그램\7. Bigfix.exe,2021-08-17 오전 9:24:12,2022-06-08 오전 6:33:52,"17,118,728",A,BigFix Client,10.0.4.32,Setup Launcher Unicode,10.0.4.32,HCL Technologies Ltd.,
+C:\프로그램\AcroRdrDC1900820071_ko_KR.exe,2020-11-12 오전 6:53:50,2022-06-08 오전 6:34:02,"170,273,776",A,Adobe Self Extractor,19.8.20071.303822,Adobe Self Extractor,19.8.20071.303822,Adobe Systems Incorporated,
+C:\프로그램\CrowdStirke(백신)\WIN_CS\CS-WindowsSensor-6.34.14805.exe,2022-02-08 오전 9:04:44,2022-06-08 오전 6:32:57,"52,161,872",A,CrowdStrike Windows Sensor,6.34.14805.0,CrowdStrike Windows Sensor,6.34.14805.0,"CrowdStrike, Inc.",
+C:\프로그램\Office_Pro Plus 2019_64Bit_Korean\setup.exe,,,,,,,,,,
+C:\프로그램\wiredauth\유선\wiredauth.exe,2021-05-07 오전 2:25:24,2022-06-08 오전 6:33:46,"6,493,855",A,,,,,,
+D:\Changzhi\dnplayer-kr\dnmultiplayer.exe,,,,,,,,,,
+D:\Changzhi\dnplayer-kr\dnplayer.exe,,,,,,,,,,
+D:\Changzhi\dnplayer-kr\dnuninst.exe,,,,,,,,,,
+D:\Dev\forecopy_handy.exe,2013-08-18 오전 9:10:08,2022-07-08 오전 8:37:05,"2,173,440",A,forecopy,1.2.0.0,,1.2.0.0,,
+D:\Dev\getart2.0\utils\CrowdResponse64.exe,2016-06-08 오전 2:17:00,2022-07-08 오전 2:39:20,"1,028,648",A,CrowdStrike CrowdResponse,1.0.4.0,CrowdStrike Static Host Data Collection Tool,1.0.4.0,"CrowdStrike, Inc.",
+D:\Dev\getart2.0\utils\ev_x86.exe,2014-08-06 오전 1:31:46,2022-07-08 오전 2:39:20,"1,048,576",A,Everything,1.3.4.686,Everything,1.3.4.686,,
+D:\Dev\getart2.0\utils\forecopy.exe,2013-08-18 오전 9:10:08,2022-07-08 오전 2:39:20,"2,173,440",A,forecopy,1.2.0.0,,1.2.0.0,,
+D:\Dev\getart2.0\utils\MozillaCacheView.exe,2016-10-06 오후 9:03:36,2022-07-08 오전 2:39:20,"65,632",A,MZCacheView,1.69,MZCacheView,1.69,NirSoft,
+D:\Dev\getart2.0\utils\sigcheck.exe,2013-02-04 오후 1:46:38,2022-07-08 오전 2:39:20,"235,096",A,Sysinternals Sigcheck,1.91,File version and signature viewer,1.91,Sysinternals - www.sysinternals.com,
+D:\Dev\LINE_EXART\SHIMCACHEPARSER.EXE,2016-04-06 오전 4:30:56,2022-08-12 오전 4:31:45,"3,699,397",A,,,,,,2022-08-12 오전 7:04:48
+D:\Dev\LINE_EXART\utils\ANALYZEMFT_KOR.EXE,2014-05-22 오후 3:43:06,2022-08-11 오전 2:27:51,"5,090,707",A,,,,,,2022-08-12 오전 5:05:31
+D:\Dev\LINE_EXART\utils\BROWSINGHISTORYVIEW.EXE,2016-10-06 오후 9:03:36,2022-08-08 오전 7:19:48,"359,632",A,BrowsingHistoryView,1.86,BrowsingHistoryView,1.86,NirSoft,2022-08-12 오전 7:04:45
+D:\Dev\LINE_EXART\utils\CHROMECACHEVIEW.EXE,2016-10-06 오후 9:03:36,2022-08-08 오전 7:19:48,"62,560",A,ChromeCacheView,1.67,ChromeCacheView,1.67,NirSoft,2022-08-12 오전 7:04:46
+D:\Dev\LINE_EXART\utils\CRCONVERT.EXE,2014-12-19 오후 3:41:50,2022-08-12 오전 2:05:26,"149,504",A,CRconvert,1.0.4.0,CrowdResponse XML to CSV and HTML converter,1.0.4.0,"CrowdStrike, Inc.",2022-08-12 오전 7:04:48
+D:\Dev\LINE_EXART\utils\CROWDRESPONSE64.EXE,2016-06-08 오전 2:17:00,2022-08-12 오전 2:05:26,"1,028,648",A,CrowdStrike CrowdResponse,1.0.4.0,CrowdStrike Static Host Data Collection Tool,1.0.4.0,"CrowdStrike, Inc.",2022-08-12 오전 7:04:47
+D:\Dev\LINE_EXART\utils\es.exe,2014-07-27 오전 4:52:14,2022-08-08 오전 7:11:36,"44,032",A,,,,,,2022-08-12 오전 7:04:36
+D:\Dev\LINE_EXART\utils\ev_x64.exe,2014-08-06 오전 1:34:22,2022-07-08 오전 7:01:41,"1,441,792",A,Everything,1.3.4.686,Everything,1.3.4.686,,2022-08-08 오전 7:05:40
+D:\Dev\LINE_EXART\utils\ev_x86.exe,2014-08-06 오전 1:31:46,2022-07-08 오전 7:01:41,"1,048,576",A,Everything,1.3.4.686,Everything,1.3.4.686,,2022-08-08 오전 6:55:02
+D:\Dev\LINE_EXART\utils\EXECUTEDPROGRAMSLIST.EXE,2016-03-18 오전 3:11:04,2022-08-12 오전 4:42:22,"83,552",A,ExecutedProgramsList,1.11,ExecutedProgramsList,1.11,NirSoft,2022-08-12 오전 6:57:36
+D:\Dev\LINE_EXART\utils\fls.exe,2013-06-17 오전 7:34:24,2022-08-11 오전 2:27:51,"430,080",A,,,,,,2022-08-12 오전 5:05:27
+D:\Dev\LINE_EXART\utils\forecopy.exe,2013-08-18 오전 9:10:08,2022-07-08 오전 8:37:16,"2,173,440",A,forecopy,1.2.0.0,,1.2.0.0,,2022-08-12 오전 7:04:40
+D:\Dev\line_exart\utils\forecopy_handy.exe,,,,,,,,,,
+D:\Dev\LINE_EXART\utils\icat.exe,2013-06-17 오전 7:34:24,2022-08-11 오전 2:27:51,"425,472",A,,,,,,2022-08-12 오전 5:05:29
+D:\Dev\LINE_EXART\utils\IECACHEVIEW.EXE,2016-10-06 오후 9:03:36,2022-08-08 오전 7:19:48,"58,064",A,IECacheView,1.58,IECacheView,1.58,NirSoft,2022-08-12 오전 7:04:46
+D:\Dev\LINE_EXART\utils\MOZILLACACHEVIEW.EXE,2016-10-06 오후 9:03:36,2022-08-08 오전 7:19:48,"65,632",A,MZCacheView,1.69,MZCacheView,1.69,NirSoft,2022-08-12 오전 7:04:47
+D:\Dev\LINE_EXART\utils\SIGCHECK_VT.EXE,2015-10-30 오전 12:27:44,2022-07-22 오전 3:12:49,"308,888",A,Sysinternals Sigcheck,2.30,File version and signature viewer,2.30,Sysinternals - www.sysinternals.com,2022-07-22 오전 4:12:55
+D:\Game_workspace\00자료\OA\jre-8u321-windows-x64.exe,2022-06-13 오전 8:07:54,2022-06-13 오전 8:09:01,"85,969,096",A,Java Platform SE 8 U321,8.0.3210.7,Java Platform SE binary,8.0.3210.7,Oracle Corporation,
+D:\Game_workspace\00자료\OA\LDPlayer_3.63.exe,2022-06-14 오전 12:39:31,2022-06-14 오전 12:40:19,"288,063,480",A,,,,,,
+D:\Game_workspace\00자료\OA\python-3.9.10-amd64.exe,2022-06-13 오전 8:08:28,2022-06-13 오전 8:09:00,"28,909,456",A,Python 3.9.10 (64-bit),3.9.10150.0,Python 3.9.10 (64-bit),3.9.10150.0,Python Software Foundation,
+D:\Game_workspace\00자료\OA\Xftp-7.0.0088p.exe,2022-06-14 오전 12:41:00,2022-06-14 오전 12:43:49,"40,178,136",A,Xftp 7,7.0.0088,Xftp Installer,7.0.0088,"NetSarang Computer, Inc.",
+D:\IR\pestudio\pestudio.exe,2022-06-16 오전 4:36:26,2022-06-30 오전 7:01:38,"856,576",A,pestudio,9.35.0.0,Malware Initial Assessment - www.winitor.com,9.35.0.0,www.winitor.com,
+D:\IR\REGA_v1.5.3[Freeware]\REGA.exe,2019-06-13 오전 3:46:46,2019-06-13 오전 3:46:45,"8,125,440",A,REGA,1.5.3.0,Registry Analyzer,1.5.3.0,DFRC,2022-06-28 오전 2:13:07
+D:\IR\tool\REGA\REGA.exe,2015-10-30 오전 1:25:04,2022-06-27 오전 8:51:30,"8,159,744",A,REGA,1.5.0.5,Registry Analyzer,1.5.0.5,"4&6TECH Co., Ltd.",2022-06-27 오전 8:51:49
+D:\IR\tool\REGA\RegEx.exe,2014-04-22 오전 4:11:50,2022-06-27 오전 8:51:30,"291,328",A,RegEx: Registry Extractor,1.2.0.0,RegEx: Registry Extractor,1.2.0.0,Digital Forensic Research Center @ Korea Univ.,
+D:\IR\tool\RegistryExplorer_RECmd\RegistryExplorer\RegistryExplorer.exe,2019-04-02 오전 9:20:36,2022-06-27 오전 8:51:31,"59,480,176",A,Registry Explorer,1.4.2.0,Registry Explorer,1.4.2.0,Eric R. Zimmerman 501-313-3778,
+"D:\Tools\[P.Y.G]IDA Pro 7.5 SP3(x86, x64, ARM, ARM64, PPC, PPC64, MIPS)\ida.exe",2020-12-17 오전 8:29:08,2022-07-06 오전 12:06:23,"4,217,344",A,The Interactive Disassembler,7.5.20.1028,The Interactive Disassembler,7.5.20.1028,Hex-Rays SA,2022-07-06 오전 9:04:47
+"D:\Tools\[P.Y.G]IDA Pro 7.5 SP3(x86, x64, ARM, ARM64, PPC, PPC64, MIPS)\ida64.exe",2020-12-17 오전 8:30:27,2022-07-06 오전 12:06:23,"4,215,808",A,The Interactive Disassembler,7.5.20.1028,The Interactive Disassembler,7.5.20.1028,Hex-Rays SA,2022-07-22 오전 7:35:00
+"D:\Tools\[P.Y.G]IDA Pro 7.5 SP3(x86, x64, ARM, ARM64, PPC, PPC64, MIPS)\IDAProHelper.exe",2018-03-09 오전 6:43:13,2022-07-06 오전 12:06:24,"128,000",A,IDAProHelper ?用程序,"1, 0, 0, 1",IDAProHelper Microsoft 基???用程序,"1, 0, 0, 1",中??云?(WwW.ChinaPYG.CoM),
+D:\Tools\AssetBundleExtractor_3.0beta1_64bit\AssetBundleExtractor_3.0beta1_64bit\AssetBundleExtractor.exe,2022-04-25 오전 11:28:30,2022-04-25 오전 11:28:30,"43,520",A,,,,,,2022-06-21 오전 2:23:50
+D:\Tools\AssetStudio.net472.v0.16.47\AssetStudioGUI.exe,2022-06-16 오전 1:45:26,2022-06-21 오전 1:43:36,"217,088",A,AssetStudioGUI,0.16.47,AssetStudioGUI,0.16.47,AssetStudioGUI,
+D:\Tools\FO00355696_안시현_IDAPROFW\x64_idaprofw_hexarmfw_180227_683d36a63e3f3c6dbb6dcceb90d63612.exe,2018-05-09 오전 10:11:12,2022-06-17 오전 6:25:18,"203,125,090",A,IDA Pro v7.1 and Hex-Rays Decompiler (ARM),7.1.18.0227,IDA Pro v7.1 and Hex-Rays Decompiler (ARM) Setup,7.1.18.0227,Hex-Rays SA,
+D:\Tools\Il2CppDumper-net6-v6.7.25\Il2CppDumper-x86.exe,2022-06-09 오후 2:07:38,2022-06-16 오전 1:23:49,"148,992",A,Il2CppDumper-x86,6.7.25,Il2CppDumper-x86,6.7.25,Il2CppDumper-x86,
+D:\Tools\Il2CppDumper-net6-v6.7.25\Il2CppDumper.exe,2022-06-09 오후 2:07:38,2022-06-16 오전 1:23:49,"148,992",A,Il2CppDumper,6.7.25,Il2CppDumper,6.7.25,Il2CppDumper,
+D:\Tools\Il2CppDumper-v6.7.25\Il2CppDumper-x86.exe,2022-06-09 오후 2:07:36,2022-06-16 오전 7:06:18,"198,656",A,Il2CppDumper-x86,6.7.25,Il2CppDumper-x86,6.7.25,Il2CppDumper-x86,2022-06-20 오전 2:56:47
+D:\Tools\Il2CppDumper-v6.7.25\Il2CppDumper.exe,2022-06-09 오후 2:07:36,2022-06-16 오전 7:06:18,"198,656",A,Il2CppDumper,6.7.25,Il2CppDumper,6.7.25,Il2CppDumper,
+D:\Tools\IR\pestudio\pestudio.exe,,,,,,,,,,
+D:\Tools\jadx-gui-1.4.1-no-jre-win.exe,,,,,,,,,,
+D:\Tools\jadx-gui-1.4.1-with-jre-win\jadx-gui-1.4.1.exe,2022-05-31 오전 6:24:52,2022-06-14 오전 7:59:03,"29,470,353",A,jadx-gui,1.4.1,jadx-gui,1.4.1,jadx,
+D:\Tools\JADX-GUI-1.4.1-WITH-JRE-WIN\jre\bin\javaw.exe,2022-05-31 오전 6:24:52,2022-06-14 오전 7:59:04,"48,384",A,OpenJDK Platform 18.0.1.1,18.0.1.1,OpenJDK Platform binary,18.0.1.1,Oracle Corporation,2022-08-08 오전 5:41:03
+D:\Tools\jeb-demo-4.1.0.202106222308-JEBDecompiler-121820464987384330\bin\jeb.exe,2022-06-16 오전 1:08:20,2022-06-16 오전 1:08:20,"287,744",A,,,,,,
+D:\Tools\lin_v14_free_renew\linEngine.exe,2020-07-18 오전 11:10:59,2020-07-18 오전 11:11:08,"83,232,679",A,,,,,,
+D:\Tools\rooting\Odin3_v3.13.1\Odin3 v3.13.1.exe,2018-02-22 오후 2:48:42,2022-06-14 오전 8:24:12,"3,172,864",A,Odin Downloader,3.13.1.0,Odin Downloader,2017.10.18.1,"Samsung Electronics Co., Ltd.",
+D:\Tools\src grep\src grep\SrcGrep.exe,2018-07-11 오전 12:11:38,2022-06-14 오전 12:40:37,"700,416",A,,1.0.6299.40425,,1.0.6299.40425,,
+D:\게임검수\00자료\OA\3uTools_v2.60.022_Setup.exe,,,,,,,,,,
