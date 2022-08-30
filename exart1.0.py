@@ -236,6 +236,74 @@ def copy_ntfs(getlogfile):
             collectTriforces(mainfls, line, wfolder, getlogfile)
 
 
+def input_period(stime, etime):
+    result = []
+    print('[*] Collect Files From MFT (filesize < 20MB)')
+    mac = ['create', 'modify', 'access']
+    mftdir = ['artifacts\\drive_C\\', 'artifacts\\drive_D\\',
+              'artifacts\\drive_E\\', 'artifacts\\drive_F\\', 'artifacts\\drive_G\\']
+
+    for mactime in mac:
+        print('\n[+] %s File (%s) ~ (%s)\n' %
+              (mactime, str(stime), str(etime)))
+        for i in mftdir:
+            drivename = i.split('_')[1].replace('\\', ':')
+            if os.path.isfile(i + 'mft.csv'):
+                with open(i + 'mft.csv', 'rb') as f:
+                    for mftline in f.readlines():
+                        try:
+                            x = mftline.split(',')
+                            if x[3] == 'Folder' or x[2] == 'Inactive':
+                                continue
+                            fname = x[7].replace('/', '\\').replace('"', '')
+                            fname = fname.encode('euc_kr')
+                            if mactime == 'create':
+                                fctime = x[12].replace(
+                                    '=', '').replace('"', '')
+                                copydir = 'create'
+                            elif mactime == 'modify':
+                                fctime = x[13].replace(
+                                    '=', '').replace('"', '')
+                                copydir = 'modify'
+                            elif mactime == 'access':
+                                fctime = x[14].replace(
+                                    '=', '').replace('"', '')
+                                copydir = 'access'
+                            if fctime.find('-') and fctime.find(' ') > -1:
+                                fileinformation_create = fctime.split(' ')[0]
+                            elif fctime.find('-'):
+                                fileinformation_create = fctime
+                            else:
+                                continue
+                            fileinformation_create = datetime.datetime.strptime(
+                                fileinformation_create, '%Y-%m-%d')  # %H:%M:%S')
+                            if fileinformation_create >= stime and fileinformation_create <= etime:
+                                with open('%s-%s_%s_mft.txt' % (str(stime).split(' ')[0], str(etime).split(' ')[0], copydir), 'ab') as wf:
+                                    wf.write(str(fctime) + ':' +
+                                             drivename + fname + '\n')
+                                fullpath = drivename + fname
+                                print(str(fctime) + ' : ' + fullpath)
+                                if os.path.isfile(fullpath) and (os.path.getsize(fullpath) / (1024*1024) < 20) and fullpath not in result:
+                                    if fullpath.find('exart') == -1:
+                                        shutil.copy(fullpath, 'artifacts\\copy_from_mft\\%s\\%s' % (
+                                            copydir, fullpath.replace(':', ';',).replace(' ', '_').replace('\\', '_')))
+                                        result.append(fullpath)
+                                        with open('copy_files_from_mft.txt', 'ab') as cf:
+                                            cf.write(
+                                                str(fctime) + ':' + drivename + fname + '\n')
+                                else:
+                                    with open('error_files_from_mft.txt', 'ab') as df:
+                                        df.write(str(fctime) + ':' +
+                                                 drivename + fname + '\n')
+                        except Exception as err:
+                            # print err
+                            with open('error_files_from_mft.txt', 'ab') as ef:
+                                ef.write(mftline)
+                                continue
+            else:
+                continue
+
+
 def timeck():
     start_time = time.localtime()
     check_localtime = time.localtime()
@@ -452,7 +520,7 @@ def main():
                 continue
 
     # NTFS filesystem carving
-    """
+
     if getlogfile == '1':
         print("[+] Collect NTFS FILE SYSTEM MFT , USNJRNL , LOGFILE")
         try:
@@ -465,7 +533,6 @@ def main():
             copy_ntfs(getlogfile)
         except Exception as err:
             print('  [*] ', str(err).encode('utf-8'))
-    """
 
     print(
         "[+] Collect Registry , Prefetch , Eventlog , browser history , etc folder")
@@ -540,7 +607,7 @@ def main():
                         shutil.copy(i, 'artifacts\\collect_executed_files\\%s' % i.replace(
                             ':', ';').replace(' ', '').replace('\\', '_'))
                 except Exception as err:
-                    print('  [*] ', str(err).encode('cp949'))
+                    #print('  [*] ', str(err).encode('cp949'))
                     print('[+] Copying Error')
                     continue
 
@@ -582,11 +649,53 @@ def main():
                     os.rename('.\\artifacts\\collect_executed_files\\%s' % i.split(
                         '\\')[-1], '.\\artifacts\\collect_executed_files\\%s' % replace_fname)
             except Exception as err:
-                print('  [*] ', str(err).encode('cp949'))
+                print('[+] Copying Error')
+                #print('  [*] ', str(err).encode('cp949'))
                 continue
         f.close()
     else:
         print(" [-] executedlist.txt not found")
+
+    print('[+] collect jump list')
+    f = os.popen('utils\\es.exe file: "AutomaticDestinations\\"')
+    for i in f.readlines():
+        try:
+            i = i.replace('\n', '')
+            i = i.decode('cp949')
+
+            if len(i) > 10:
+                if i.find('exart') == -1:
+                    print(i)
+                    shutil.copy(i, 'artifacts\\jumplist\\%s' % i.replace(
+                        ':', '_').replace(' ', '').replace('\\', '_'))
+        except Exception as err:
+            # print(str(err).encode('cp949'))
+            print('[+] Copying Error')
+            continue
+
+    print('[+] collect rar , bat , ps1 , vbs , jsp , asp , aspx , php , war , cer , cdx , asa , ;.')
+    f = os.popen('utils\\es.exe -r "(_jsp\\.java|\\.rar|\\.ps1|\\.vbs|\\.jsp|\\.asp|\\.aspx|\\.php|\\.war|\\.cer|\\.cdx|\\.asa|;\.(jpg|gif|bmp|png))$"')
+    for i in f.readlines():
+        try:
+            i = i.replace('\n', '')
+            i = i.decode('cp949')
+            if os.path.isfile(i) and i.lower().find('winsxs') == -1 and i.lower().find('microsoft.net') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
+                if os.path.getsize(i) / (1024*1024) < 20:
+                    if i.find('exart') == -1:
+                        print(i)
+                        shutil.copy(i, 'artifacts\\scriptfiles\\%s' %
+                                    i.replace(':', '_').replace(' ', '').replace('\\', '_'))
+        except Exception as err:
+            # print(str(err).encode('cp949'))
+            print('[+] Copying Error')
+            continue
+
+    # mft 검증 후 해당 시간대에 파일들이 존재한다면 파일 채증
+    if check_mac == '1':
+        try:
+            input_period(stime, etime)
+        except Exception as err:
+            print(str(err))
 
 
 if __name__ == "__main__":

@@ -8,5 +8,7 @@
    c. artifacts\iconcache
    d. artifacts\webcache
    e. artifacts\collect_executed_files
+   f. artifacts\jumplist
+   g. artifacts\scriptfiles
 
 3. "%TEMP%" 해쉬 수집 시 docker와 충돌 발생 docker를 종료해야함
