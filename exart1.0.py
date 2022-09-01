@@ -248,15 +248,17 @@ def input_period(stime, etime):
               (mactime, str(stime), str(etime)))
         for i in mftdir:
             drivename = i.split('_')[1].replace('\\', ':')
+            #print("[=] input period drivename : " + drivename)
             if os.path.isfile(i + 'mft.csv'):
                 with open(i + 'mft.csv', 'rb') as f:
                     for mftline in f.readlines():
                         try:
-                            x = mftline.split(',')
+                            #print("[=] input period mftline : " + mftline.decode('utf-8'))
+                            x = str(mftline).split(',')
+                            x = str(x)
                             if x[3] == 'Folder' or x[2] == 'Inactive':
                                 continue
                             fname = x[7].replace('/', '\\').replace('"', '')
-                            fname = fname.encode('euc_kr')
                             if mactime == 'create':
                                 fctime = x[12].replace(
                                     '=', '').replace('"', '')
@@ -270,9 +272,10 @@ def input_period(stime, etime):
                                     '=', '').replace('"', '')
                                 copydir = 'access'
                             if fctime.find('-') and fctime.find(' ') > -1:
-                                fileinformation_create = fctime.split(' ')[0]
+                                fileinformation_create = str(
+                                    fctime).split(' ')[0]
                             elif fctime.find('-'):
-                                fileinformation_create = fctime
+                                fileinformation_create = str(fctime)
                             else:
                                 continue
                             fileinformation_create = datetime.datetime.strptime(
@@ -282,8 +285,10 @@ def input_period(stime, etime):
                                     wf.write(str(fctime) + ':' +
                                              drivename + fname + '\n')
                                 fullpath = drivename + fname
-                                print(str(fctime) + ' : ' + fullpath)
-                                if os.path.isfile(fullpath) and (os.path.getsize(fullpath) / (1024*1024) < 20) and fullpath not in result:
+                                #fullpath = fname
+                                print(fctime + ' : ' + fullpath)
+                                if os.path.isfile(fullpath) and (os.path.getsize(fullpath) / (1024*1024) < 20):
+                                    # and fullpath not in result:
                                     if fullpath.find('exart') == -1:
                                         shutil.copy(fullpath, 'artifacts\\copy_from_mft\\%s\\%s' % (
                                             copydir, fullpath.replace(':', ';',).replace(' ', '_').replace('\\', '_')))
@@ -291,17 +296,137 @@ def input_period(stime, etime):
                                         with open('copy_files_from_mft.txt', 'ab') as cf:
                                             cf.write(
                                                 str(fctime) + ':' + drivename + fname + '\n')
+                                """
                                 else:
                                     with open('error_files_from_mft.txt', 'ab') as df:
                                         df.write(str(fctime) + ':' +
                                                  drivename + fname + '\n')
+                                """
                         except Exception as err:
-                            # print err
+                            print("mft searching......")
+                            # print(err)
+                            continue
+                            """
                             with open('error_files_from_mft.txt', 'ab') as ef:
                                 ef.write(mftline)
                                 continue
+                            """
             else:
                 continue
+
+
+def filtering_evtx():
+    print('[+] Filtering Event Log ')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 528,682,683,1102,4624 security /accepteula > artifacts\\special_eventlog\\logon.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4608,6424,4672,4902,5024,5033,6005 system /accepteula > artifacts\\special_eventlog\\logon2.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\logon2.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1,12,4608 security /accepteula >> artifacts\\special_eventlog\\logon2.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\logon2.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1531,4101,5615 application /accepteula >> artifacts\\special_eventlog\\logon2.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 201,4647 system /accepteula > artifacts\\special_eventlog\\logoff.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\logoff.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 13,26,1073,1074,1100,4609,6006,6008 security /accepteula >> artifacts\\special_eventlog\\logoff.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\logoff.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1532,4004, application /accepteula >> artifacts\\special_eventlog\\logoff.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4000,4198,4199,4778,4779 system /accepteula > artifacts\\special_eventlog\\whois.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\whois.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4624 security /accepteula >> artifacts\\special_eventlog\\whois.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1074,4647,1100,1101,1073,6008 security /accepteula > artifact\\special_eventlog\\poweroff.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\poweroff.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1532,9009 application /accepteula >> artifacts\\special_eventlog\\poweroff.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\poweroff.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 41 system /accepteula >> artifacts\\special_eventlog\\poweroff.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4624,4778,4779,1449 security /accepteula > artifacts\\special_eventlog\\remoteaccess.txt')
+
+    execute_utils('utils\\psloglist.exe -s -i 10000,10100,20001,24576,24577,24578,24579 system /accepteula > artifacts\\special_eventlog\\install_driver.txt')
+
+    execute_utils('utils\\psloglist.exe -s -i 1,6,7009,7011,7036,7039,7040,7042,7045 system /accepteula > artifacts\\special_eventlog\\install_service_process.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4688,4689,4697 security /accepteula >> artifacts\\special_eventlog\\install_service_process.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1000,8194,11707,11724 application /accepteula > artifacts\\special_eventlog\\install_program.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4656,4658,4690 security /accepteula > artifacts\\special_eventlog\\handle_info.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4720,4722,4723,4724,4732,4733,4738 security /accepteula > artifacts\\special_eventlog\\change_account.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 35,37 system /accepteula > artifacts\\special_eventlog\\change_time.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\change_time.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4616 security /accepteula >> artifacts\\special_eventlog\\change_time.txt')
+
+    execute_utils('utils\\psloglist.exe -s -i 57,26,10000,20001,24576,24577,24578,24579 system /accepteula > artifacts\\special_eventlog\\external_device.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacst\\special_eventlog\\external_device.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4985,4660,4663 security /accepteula >> artifacts\\special_eventlog\\external_device.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 5140,5142,5143,5144 security /accepteula > artifacts\\special_eventlog\\share_file.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4656,4657,4660,4663 security /accepteula > artifacts\\special_eventlog\\modify_registry.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 104,7034 system /accepteula > artifacts\\special_eventlog\\modify_audit_log_serivce.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\modify_audit_log_serivce.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4719,4817 security /accepteula >> artifacts\\special_eventlog\\modify_audit_log_serivce.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1014 system /accepteula > artifacts\\special_eventlog\\dns_query_error.txt')
+
+    execute_utils('utils\\psloglist.exe -s -i 4000,4001,4198,4199,50036,50037,51046,51047,7009 system /accepteula > artifacts\\special_eventlog\\Network_error.txt')
+
+    execute_utils(
+        'utils\\psloglist.exe -s -i 1,6,89,1073,7009,7011,7045,7039,7040,7042 system /accepteula > artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils('utils\\psloglist.exe -s -i 10000,10100,20001,24576,24577,24578,24579,104,7034 system /accepteula >> artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils('utils\\psloglist.exe -s -i 4658,4690,4697,4720,4722,4723,4724,4732,4733 security /accepteula >> artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils(
+        'echo ############################################################### >> artifacts\\special_eventlog\\suspicious.txt')
+    execute_utils(
+        'utils\\psloglist.exe -s -i 4738,4656,4657,4660,4663,4719,4817 security /accepteula >> artifacts\\special_eventlog\\suspicious.txt')
+
+    execute_utils('move utils\\*.txt .\\artifacts')
+    execute_utils('move .\\*.txt .\\artifacts')
+    execute_utils('move .\\*.csv .\\artifacts')
+    execute_utils('del superfetch.xml')
 
 
 def timeck():
@@ -327,18 +452,20 @@ def main():
     workcontinue = '0'  # while 문 루프 판별
     sysmon_already = '0'
     check_mac = '0'
-    if (len(sys.argv) == 2 and sys.argv[1] == 'linegames1!'):
-        install_sysmon = '0'
-        getlogfile = '0'
-        getalllogfile = '0'
-        getallexedllfile = '0'
-        checkunsigned = '0'
-        check_sig_vt = '2'
-        check_mac = '0'
-    else:
-        print('[*] hey who are you??')
-        print('[*] plz argument input password')
-        sys.exit(1)
+    # if (len(sys.argv) == 2 and sys.argv[1] == 'linegames1!'):
+    install_sysmon = '0'
+    getlogfile = '0'
+    getalllogfile = '0'
+    getallexedllfile = '0'
+    checkunsigned = '0'
+    check_sig_vt = '2'
+    check_mac = '0'
+    check_password = '0'
+    cnt = 0
+    # else:
+    #print('[*] hey who are you??')
+    #print('[*] plz argument input password')
+    # sys.exit(1)
     print('\n############################################################################')
     print('[*] plz administrator cmd excute.')
     print('[*] Make sure you have enough capacity.')
@@ -357,9 +484,46 @@ def main():
         print('\n[*] see you sayonara.\n')
         sys.exit(1)
 
+    while(check_password == '0'):
+
+        if cnt == 3:
+            print('\n[*] see you sayonara.\n')
+            sys.exit(1)
+
+        check_password = input(
+            '[+] plz, input password : ')
+
+        if check_password == 'linegames1!':
+            check_password = '1'
+            break
+        else:
+            print('\n[-] wrong password\n')
+            check_password = '0'
+            cnt += 1
+
     # 필수 디렉토리 검증 필요
     # artifacts
     # artifacts\hash
+    print('\n[*] Directory initialize.\n')
+    shutil.rmtree("artifacts", ignore_errors=True)
+    os.mkdir("artifacts")
+    os.mkdir("artifacts\\hash")
+    os.mkdir("artifacts\\iconcache")
+    os.mkdir("artifacts\\webcache")
+    os.mkdir("artifacts\\collect_executed_files")
+    os.mkdir("artifacts\\jumplist")
+    os.mkdir("artifacts\\scriptfiles")
+    os.mkdir("artifacts\\copy_from_mft")
+    os.mkdir("artifacts\\copy_from_mft\\access")
+    os.mkdir("artifacts\\copy_from_mft\\create")
+    os.mkdir("artifacts\\copy_from_mft\\modify")
+    os.mkdir("artifacts\\all_exe_dll")
+    os.mkdir("artifacts\\all_log_extension_files")
+    os.mkdir("artifacts\\recentfilesview")
+    os.mkdir("artifacts\\collect_recentfilesview")
+    os.mkdir("artifacts\\injected_codes")
+    os.mkdir("artifacts\\shellbags")
+    os.mkdir("artifacts\\special_eventlog")
 
     while(checkunsigned == '0'):
         checkunsigned = input(
@@ -463,7 +627,7 @@ def main():
     # parameter init setting end.
     ############################
 
-    # memdump(osarch)  # memory dump
+    memdump(osarch)  # memory dump
     # ahnreportexe(osarch) # ahnreport execute
 
     print("[+] collect system time and Systeminfo")
@@ -480,7 +644,7 @@ def main():
 
     # 바이러스 토탈 등의 악성코드 사이트 활용을 위한 해쉬값 수집
     print("[+] Collect Hashes")
-    #collect_hash(osarch, check_sig_vt)
+    collect_hash(osarch, check_sig_vt)
 
     # sysmon install
     if install_sysmon == '1':
@@ -587,7 +751,8 @@ def main():
         f = open('shimcache.txt', 'r')
         for i in f.readlines():
             try:
-                i = i.decode('cp949').split(',')[2]
+                #i = i.decode('cp949').split(',')[2]
+                i = i.split(',')[2]
                 i = i.replace('SYSVOL', 'c:').replace('\\??\\', '')
                 replace_fname = i.replace(':', ';').replace(
                     ' ', '').replace('\\', '_')
@@ -608,7 +773,7 @@ def main():
                             ':', ';').replace(' ', '').replace('\\', '_'))
                 except Exception as err:
                     #print('  [*] ', str(err).encode('cp949'))
-                    print('[+] Copying Error')
+                    print('[+] shimcache log Copying Error')
                     continue
 
             except Exception as err:
@@ -626,7 +791,8 @@ def main():
         for i in f.readlines():
             try:
                 # 한글 처리 문제
-                i = i.decode('cp949').split(',')[0]
+                #i = i.decode('cp949').split(',')[0]
+                i = i.split(',')[0]
                 replace_fname = i.replace(':', ';').replace(
                     ' ', '').replace('\\', '_').replace('\n', '')
                 replace_fname = replace_fname.replace(
@@ -649,7 +815,7 @@ def main():
                     os.rename('.\\artifacts\\collect_executed_files\\%s' % i.split(
                         '\\')[-1], '.\\artifacts\\collect_executed_files\\%s' % replace_fname)
             except Exception as err:
-                print('[+] Copying Error')
+                print('[+] executed log Copying Error')
                 #print('  [*] ', str(err).encode('cp949'))
                 continue
         f.close()
@@ -661,7 +827,7 @@ def main():
     for i in f.readlines():
         try:
             i = i.replace('\n', '')
-            i = i.decode('cp949')
+            #i = i.decode('cp949')
 
             if len(i) > 10:
                 if i.find('exart') == -1:
@@ -670,7 +836,7 @@ def main():
                         ':', '_').replace(' ', '').replace('\\', '_'))
         except Exception as err:
             # print(str(err).encode('cp949'))
-            print('[+] Copying Error')
+            print('[+] jump list Copying Error')
             continue
 
     print('[+] collect rar , bat , ps1 , vbs , jsp , asp , aspx , php , war , cer , cdx , asa , ;.')
@@ -678,24 +844,129 @@ def main():
     for i in f.readlines():
         try:
             i = i.replace('\n', '')
-            i = i.decode('cp949')
+            #i = i.decode('cp949')
             if os.path.isfile(i) and i.lower().find('winsxs') == -1 and i.lower().find('microsoft.net') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
                 if os.path.getsize(i) / (1024*1024) < 20:
                     if i.find('exart') == -1:
                         print(i)
-                        shutil.copy(i, 'artifacts\\scriptfiles\\%s' %
-                                    i.replace(':', '_').replace(' ', '').replace('\\', '_'))
+                        shutil.copy(i, 'artifacts\\scriptfiles\\%s' % i.replace(
+                            ':', '_').replace(' ', '').replace('\\', '_'))
         except Exception as err:
             # print(str(err).encode('cp949'))
-            print('[+] Copying Error')
+            print('[+] scriptfiles Copying Error')
             continue
 
     # mft 검증 후 해당 시간대에 파일들이 존재한다면 파일 채증
+
     if check_mac == '1':
         try:
             input_period(stime, etime)
         except Exception as err:
             print(str(err))
+
+    if getallexedllfile == '1':
+        print('[+] collect all exe dll files (except larger than 20MB, winsxs path and too long filename)')
+        f = os.popen('utils\\es.exe "<ext:exe>|<ext:dll>"')
+        for i in f.readlines():
+            try:
+                i = i.replace('\n', '')
+                #i = i.decode('utf-8')
+                if os.path.isfile(i) and i.lower().find('winsxs') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
+                    if os.path.getsize(i) / (1024*1024) < 20:
+                        if i.find('exart') == -1:
+                            print(i)
+                            shutil.copy(i, 'artifacts\\all_exe_dll\\%s' %
+                                        i.replace(':', '_').replace(' ', '').replace('\\', '_'))
+            except Exception as err:
+                print(str(err).encode('cp949'))
+                print('[+] exe dll files Copying Error')
+                continue
+
+    if getalllogfile == '1':
+        print('[+] collect all log extension files')
+        f = os.popen('utils\\es.exe "<ext:log>"')
+        for i in f.readlines():
+            try:
+                i = i.replace('\n', '')
+                #i = i.decode('utf-8')
+                if os.path.isfile(i) and i.lower().find('winsxs') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
+                    # if os.path.getsize(i) / (1024*1024) < 20 :
+                    if i.find('exart') == -1:
+                        print(i)
+                        shutil.copy(i, 'artifacts\\all_log_extension_files\\%s' %
+                                    i.replace(':', '_').replace(' ', '').replace('\\', '_'))
+            except Exception as err:
+                print(str(err).encode('cp949'))
+                print('[+] all log extension files Copying Error')
+                continue
+
+        print("[+] collect recentfiles log")
+        execute_utils(
+            'utils\\recentfilesview.exe /scomma .\\utils\\recentfilesview.txt')
+        if os.path.isfile('.\\utils\\recentfilesview.txt') == True:
+            f = open('.\\utils\\recentfilesview.txt', 'r')
+            for i in f.readlines():
+                try:
+                    i = i.split(',')[0]
+                    #i = i.decode('cp949')
+                    replace_fname = i.replace(':', ';').replace(
+                        ' ', '').replace('\\', '_').replace('\n', '')
+                    if os.path.isfile('.\\artifacts\\recentfilesview\\' + replace_fname):
+                        continue
+                    print(' [-] copying "%s"' % i)
+                    if os.path.getsize(str(i)) / (1024*1024) > 20:
+                        print(
+                            ' [-] Exception - file size greater than 20MB : "%s"' % (i.encode('cp949')))
+                        cantcopyfiles.write(str(err).encode('cp949') +
+                                            ' - ' + i.encode('cp949') + '\n')
+                        continue
+                    if i.find('exart') == -1:
+                        shutil.copy(i, 'artifacts\\collect_recentfilesview\\%s' %
+                                    i.replace(':', '_').replace(' ', '').replace('\\', '_'))
+                        #execute_utils('utils\\forecopy.exe  -f  "%s" .\\artifact\\collect_recentfilesview' %i.encode('cp949'))
+                        os.rename('.\\artifacts\\collect_recentfilesview\\%s' % i.split(
+                            '\\')[-1], '.\\artifacts\\collect_recentfilesview\\%s' % replace_fname)
+                except Exception as err:
+                    print('  [*] ' + str(err))
+                    #cantcopyfiles.write(str(err).encode('cp949') + ' - ' + i.encode('cp949') + '\n')
+                    continue
+            f.close()
+        else:
+            print(" [-] recentfilesview.txt not found")
+
+    print('[+] collect usb device info')
+    execute_utils('utils\\usbdeview.exe /shtml artifacts\\usbdevinfo.html')
+    print('[+] collect LastActivityView')
+    execute_utils(
+        'utils\\LastActivityView.exe /shtml artifacts\\lastactivityview.html')
+    print('[+] find injected dlls')
+    execute_utils('utils\\injecteddll.exe /shtml artifacts\\injecteddll.html')
+    print('[+] find injected codes')
+    execute_utils('utils\\injdmp.exe -a > artifacts\\injected_code.txt')
+    injected_code = glob.glob('.\\*.bin')
+    for i in injected_code:
+        try:
+            shutil.move(i, 'artifacts\\injected_codes')
+        except Exception as err:
+            print(str(err))
+            continue
+
+    print('[+] parsing  shellbags for all user ')
+    ntuserfile = glob.glob('artifacts\\registry\\*NTUSER.DAT')
+    for i in ntuserfile:
+        #i = i.encode('cp949')
+        print(i)
+        execute_utils('utils\\shellbagsparser.exe -o csv "%s" > artifacts\\shellbags\\shellbags_%s.txt' %
+                      (i, i.split('\\')[-1].replace(' ', '_')))
+
+    # 특정 이벤트로그 별도 수집
+    filtering_evtx()
+
+    if checkunsigned == '1':
+        check_unsigned()
+    if install_sysmon == '1' and sysmon_already != '1':
+        execute_utils('utils\\sysmon.exe -u')
+    print('\n[+] Finish ')
 
 
 if __name__ == "__main__":
