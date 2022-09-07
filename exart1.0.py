@@ -1,3 +1,18 @@
+import hashlib
+import time
+import platform
+import shutil
+import glob
+import logging
+import re
+import struct
+import datetime
+import csv
+import sys
+import string
+import binascii
+import getopt
+import codecs
 import os
 from xml.etree.ElementTree import *
 import xml.parsers.expat
@@ -5,23 +20,7 @@ import zipfile
 from base64 import b64decode
 # import commands python2 module
 import subprocess  # commands > subprocess
-import codecs
-import getopt
-import subprocess
-import binascii
-import string
-import sys
-import csv
-import datetime
-import struct
-import codecs
-import re
-import logging
-import glob
-import shutil
-import platform
-import time
-import hashlib
+subprocess.__file__
 
 
 ###################
@@ -40,11 +39,11 @@ def memdump(osarch):
     print("[+] Memory Dumping")
 
     if osarch == '1':
-        #print("winpmem32 ---------------")
+        # print("winpmem32 ---------------")
         # execute_utils('utils\\dumpit3.exe')
         execute_utils('utils\\winpmem86.exe artifacts\\windows10.aff4')
     else:
-        #print("winpmem64 ---------------")
+        # print("winpmem64 ---------------")
         # execute_utils('utils\\dumpit.exe')
         execute_utils('utils\\winpmem64.exe artifacts\\windows10.aff4')
 
@@ -52,11 +51,11 @@ def memdump(osarch):
     do_local = True
 
     if osarch == '1':
-        #print("ev_x86 ---------------")
+        # print("ev_x86 ---------------")
         os.spawnl(os.P_NOWAIT, 'utils\\ev_x86.exe',
                   'utils\\ev_x86.exe')  # spawnl 백그라운드로 동시 실행 가능
     else:
-        #print("ev_x64 ---------------")
+        # print("ev_x64 ---------------")
         os.spawnl(os.P_NOWAIT, 'utils\\ev_x64.exe', 'utils\\ev_x64.exe')
 
 
@@ -132,15 +131,15 @@ icat = "utils\\icat.exe"
 def listDrives():
     tmpDrives = []
     drives = []
-    #fsCommand = subprocess.Popen(["fsutil", "fsinfo", "drives"], stdout=subprocess.PIPE)
-    #fsOut = fsCommand.communicate()
-    #tmpDrives = fsOut[0].split(":")
+    # fsCommand = subprocess.Popen(["fsutil", "fsinfo", "drives"], stdout=subprocess.PIPE)
+    # fsOut = fsCommand.communicate()
+    # tmpDrives = fsOut[0].split(":")
     dl = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     fsOut = ['%s:' % d for d in dl if os.path.exists('%s:' % d)]
     tmpDrives = fsOut[0].split(":")
 
-    #del tmpDrives[0]
-    #del tmpDrives[-1]
+    # del tmpDrives[0]
+    # del tmpDrives[-1]
     # for line in tmpDrives:
     #    drives.append(line[-1])
     # return drives
@@ -220,8 +219,8 @@ def copy_ntfs(getlogfile):
     drives = listDrives()
 
     for line in drives:
-        #print("line sub2", line)
-        #print("line sub", line[0:1])
+        # print("line sub2", line)
+        # print("line sub", line[0:1])
         line = line[0:1]
         wfolder = ""
         mainfls = flsResult(line, extraCode)
@@ -248,12 +247,12 @@ def input_period(stime, etime):
               (mactime, str(stime), str(etime)))
         for i in mftdir:
             drivename = i.split('_')[1].replace('\\', ':')
-            #print("[=] input period drivename : " + drivename)
+            # print("[=] input period drivename : " + drivename)
             if os.path.isfile(i + 'mft.csv'):
                 with open(i + 'mft.csv', 'rb') as f:
                     for mftline in f.readlines():
                         try:
-                            #print("[=] input period mftline : " + mftline.decode('utf-8'))
+                            # print("[=] input period mftline : " + mftline.decode('utf-8'))
                             x = str(mftline).split(',')
                             x = str(x)
                             if x[3] == 'Folder' or x[2] == 'Inactive':
@@ -285,7 +284,7 @@ def input_period(stime, etime):
                                     wf.write(str(fctime) + ':' +
                                              drivename + fname + '\n')
                                 fullpath = drivename + fname
-                                #fullpath = fname
+                                # fullpath = fname
                                 print(fctime + ' : ' + fullpath)
                                 if os.path.isfile(fullpath) and (os.path.getsize(fullpath) / (1024*1024) < 20):
                                     # and fullpath not in result:
@@ -429,6 +428,220 @@ def filtering_evtx():
     execute_utils('del superfetch.xml')
 
 
+class Recoder(object):
+    def __init__(self, stream, decoder, encoder, eol='\r\n'):
+        self._stream = stream
+        self._decoder = decoder if isinstance(
+            decoder, codecs.IncrementalDecoder) else codecs.getincrementaldecoder(decoder)()
+        self._encoder = encoder if isinstance(
+            encoder, codecs.IncrementalEncoder) else codecs.getincrementalencoder(encoder)()
+        self._buf = ''
+        self._eol = eol
+        self._reachedEof = False
+
+    def read(self, size=None):
+        r = self._stream.read(size)
+        raw = self._decoder.decode(r, size is None)
+        return self._encoder.encode(raw)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._reachedEof:
+            raise StopIteration()
+        while True:
+            line, eol, rest = self._buf.partition(self._eol)
+            if eol == self._eol:
+                self._buf = rest.decode(b'', True)
+                return self._encoder.encode(line + eol)
+            raw = self._stream.read(1024)
+            if raw == '':
+                self._decoder.decode(b'', True)
+                self._reachedEof = True
+                return self._encoder.encode(self._buf)
+            self._buf += self._decoder.decode(raw)
+    next = __next__
+
+    def close(self):
+        return self._stream.close()
+
+
+def check_unsigned():
+    print('[+] Check Unsigned Files')
+    pass_file = ['vtlove.exe', 'pescanner.exe', 'listdlls.exe', '_ssl.pyd', '_socket.pyd', '_hashlib.pyd', 'python27.dll',
+                 'autorunsc.exe', 'sigcheck.exe', 'listdlls_win7.exe', 'ntfs_collect_artifact.exe', 'pescanner_exclude_vt.exe', 'shimcacheparser.exe']
+    check_count = 0
+    files = []
+    cnt = 0
+    if os.path.isdir('loaded_files') == False:
+        os.mkdir('loaded_files')
+    if os.path.isdir('unsigned') == False:
+        os.mkdir('unsigned')
+    if os.path.isfile('autocheck.txt'):
+        os.remove('autocheck.txt')
+    flist = open('autocheck.txt', 'w')
+
+    os_type = platform.release().lower()
+    if os_type.find('xp') > -1 or os_type.find('2003') > -1:
+        loadeddll = os.popen('utils\\listdlls.exe')
+    else:
+        loadeddll = os.popen('utils\\listdlls_win7.exe /accepteula')
+        loadeddll = loadeddll.read()
+        loadeddll = loadeddll.split('\n')
+
+    winroot = glob.glob('c:\\windows\\*.*')
+    system32 = glob.glob('c:\\windows\\system32\\*.*')
+    system_dir = glob.glob('c:\\windows\\system\\*.*')
+    temp_dir = os.popen('echo %TEMP%').read()
+    temp_dir = temp_dir.replace('\n', '') + '\\*.*'
+    temp_dir = glob.glob(temp_dir)
+
+    if os.path.isdir('c:\\$recycle.bin'):
+        recycle_dir = 'c:\\$recycle.bin'
+    else:
+        recycle_dir = 'c:\\recycler'
+    recycle_dir = glob.glob(recycle_dir + '\\*.*')
+
+    for i in loadeddll:
+        if i.find('0x') > -1:
+            input_file = (i.split(':')[0].replace('\\??\\', '').split(
+                ' ')[-1] + ':' + i.split(':')[-1]).lower()
+            input_file = str(input_file)
+            if input_file not in files:
+                if input_file.split('\\')[-1] in pass_file:
+                    continue
+                cnt += 1
+                files.append(input_file.lower())
+                flist.write(input_file.lower() + '\n')
+                print(input_file)
+    for i in winroot:
+        if os.path.isfile(i) and i not in files:
+            # tmpext = os.path.basename(i).split('.')[-1].replace('\n','').lower()
+            # if tmpext == 'exe' or tmpext == 'dll' or tmpext == 'ocx' or tmpext == 'dat' or tmpext == 'src' or tmpext == 'sys':
+            files.append(i)
+            cnt += 1
+            print(i)
+            i = i + '\n'
+            # flist.write(i.lower())
+
+    for i in system32:
+        if os.path.isfile(i) and i not in files:
+            files.append(i)
+            cnt += 1
+            print(i)
+            i = i + '\n'
+            # flist.write(i.lower())
+    for i in system_dir:
+        if os.path.isfile(i) and i not in files:
+            files.append(i)
+            cnt += 1
+            print(i)
+            i = i + '\n'
+            # flist.write(i.lower())
+    for i in temp_dir:
+        if os.path.isfile(i) and i not in files:
+            files.append(i)
+            cnt += 1
+            print(i)
+            i = i + '\n'
+            # flist.write(i.lower())
+
+    for i in recycle_dir:
+        if os.path.isfile(i) and i not in files:
+            files.append(i)
+            cnt += 1
+            print(i)
+            i = i + '\n'
+            # flist.write(i.lower())
+    os.system('utils\\autorunsc.exe -a * -c -m /accepteula > utils\\autoruns.txt')
+    shutil.copy('utils\\autoruns.txt', 'artifacts\\autoruns.txt')
+    with open('utils\\autoruns.txt', 'rt', encoding='utf-16') as f:
+        sr = Recoder(f, 'utf-16', 'utf-8')
+        for row in csv.reader(f):
+            if len(row):
+                row = row[7].replace('\r', '').replace('\n', '').lower()
+                if row and i not in files and row.find('c:\\') != -1:
+                    files.append(row)
+                    row = row + '\n'
+                    # flist.write(row)
+    print('check list : %d\n\n' % cnt)
+    flist.close()
+    for i in files:   # must edit
+        try:
+            print('[copying %s]' % i)
+            if i.find('exart') == -1:
+                shutil.copy(i, 'loaded_files\\%s' % i.replace(
+                    ':', ';').replace(' ', '').replace('\\', '_'))
+        except:
+            # print '[ Copy Error ] %s'%i
+            continue
+    #print("sigcheck start : ")
+    sig = subprocess.Popen(
+        'utils\\sigcheck.exe -q -v -e -u /accepteula loaded_files', stdout=subprocess.PIPE)
+    result = sig.communicate()
+    #print("+++++++++ : ", result)
+    sig = result[0].decode('cp1252')
+    sig = sig.split('\r\n')
+    sig = str(sig).split(',')
+    files = []
+    print('\n[ Check Unsigned File] plz wait ~')
+    for i in sig:
+        # print("------------------"+i)
+        i = i.replace(' ', '').replace('\'', '').replace('\"', '')
+        if(i.find("\\\\") != -1):
+            #print("find : ", i)
+            files.append(i)
+
+    if os.path.isdir('artifacts\\collect_executed_files') == True:
+        sig = subprocess.Popen(
+            'utils\\sigcheck.exe -q -v -e -u /accepteula artifacts\\collect_executed_files', stdout=subprocess.PIPE)
+        result = sig.communicate()
+        sig = result[0].decode('cp1252')
+        sig = sig.split('\r\n')
+        sig = str(sig).split(',')
+        for i in sig:
+            print(i)
+            i = i.replace(' ', '').replace('\'', '').replace('\"', '')
+            if(i.find("\\\\") != -1):
+                #print("find : ", i)
+                files.append(i)
+        if os.path.isdir('artifacts\\collect_shimcache_files') == True:
+            sig = subprocess.Popen(
+                'utils\\sigcheck.exe -q -v -e -u /accepteula artifacts\\collect_shimcache_files', stdout=subprocess.PIPE)
+            result = sig.communicate()
+            sig = result[0].decode('cp1252')
+            sig = sig.split('\r\n')
+            sig = str(sig).split(',')
+            for i in sig:
+                print(i)
+                i = i.replace(' ', '').replace('\'', '').replace('\"', '')
+                if(i.find("\\\\") != -1):
+                    #print("find : ", i)
+                    files.append(i)
+        if os.path.isdir('artifacts\\all_exe_dll') == True:
+            sig = subprocess.Popen(
+                'utils\\sigcheck.exe -q -v -e -u /accepteula artifacts\\all_exe_dll', stdout=subprocess.PIPE)
+            result = sig.communicate()
+            sig = result[0].decode('cp1252')
+            sig = sig.split('\r\n')
+            sig = str(sig).split(',')
+            for i in sig:
+                print(i)
+                i = i.replace(' ', '').replace('\'', '').replace('\"', '')
+                if(i.find("\\\\") != -1):
+                    #print("find : ", i)
+                    files.append(i)
+        for i in files:
+            try:
+                print('[ Copying Unsigned File ] %s' % i)
+                # if i.find('exart') == -1:
+                shutil.move(i, '.\\unsigned\\')
+            except:
+                continue
+        os.system('rd /s /q loaded_files')
+
+
 def timeck():
     start_time = time.localtime()
     check_localtime = time.localtime()
@@ -463,8 +676,8 @@ def main():
     check_password = '0'
     cnt = 0
     # else:
-    #print('[*] hey who are you??')
-    #print('[*] plz argument input password')
+    # print('[*] hey who are you??')
+    # print('[*] plz argument input password')
     # sys.exit(1)
     print('\n############################################################################')
     print('[*] plz administrator cmd excute.')
@@ -607,15 +820,15 @@ def main():
 
     os_type = platform.release().lower()  # os_type 10
     if os_type.find('xp') > -1 or os_type.find('2003') > -1:
-        #print("os version < 10")
+        # print("os version < 10")
         osspec = '1'
     else:
-        #print("os version >= 10")
+        # print("os version >= 10")
         osspec = '2'
 
     # osarchi = platform.machine() # osarchi AMD64
     osarchi = platform.machine()
-    #print("os version < 10", osarchi.find('32'))
+    # print("os version < 10", osarchi.find('32'))
     if osarchi.find('64') > -1:
         osarch = '2'
     else:
@@ -701,7 +914,7 @@ def main():
     print(
         "[+] Collect Registry , Prefetch , Eventlog , browser history , etc folder")
     # extract a $MFT
-    #execute_utils('utils\\forecopy.exe -m artifacts')
+    # execute_utils('utils\\forecopy.exe -m artifacts')
     # extract event logs
     execute_utils('utils\\forecopy.exe -e artifacts')
     # extract prefetch & superfetch files
@@ -751,7 +964,7 @@ def main():
         f = open('shimcache.txt', 'r')
         for i in f.readlines():
             try:
-                #i = i.decode('cp949').split(',')[2]
+                # i = i.decode('cp949').split(',')[2]
                 i = i.split(',')[2]
                 i = i.replace('SYSVOL', 'c:').replace('\\??\\', '')
                 replace_fname = i.replace(':', ';').replace(
@@ -772,7 +985,7 @@ def main():
                         shutil.copy(i, 'artifacts\\collect_executed_files\\%s' % i.replace(
                             ':', ';').replace(' ', '').replace('\\', '_'))
                 except Exception as err:
-                    #print('  [*] ', str(err).encode('cp949'))
+                    # print('  [*] ', str(err).encode('cp949'))
                     print('[+] shimcache log Copying Error')
                     continue
 
@@ -791,7 +1004,7 @@ def main():
         for i in f.readlines():
             try:
                 # 한글 처리 문제
-                #i = i.decode('cp949').split(',')[0]
+                # i = i.decode('cp949').split(',')[0]
                 i = i.split(',')[0]
                 replace_fname = i.replace(':', ';').replace(
                     ' ', '').replace('\\', '_').replace('\n', '')
@@ -816,7 +1029,7 @@ def main():
                         '\\')[-1], '.\\artifacts\\collect_executed_files\\%s' % replace_fname)
             except Exception as err:
                 print('[+] executed log Copying Error')
-                #print('  [*] ', str(err).encode('cp949'))
+                # print('  [*] ', str(err).encode('cp949'))
                 continue
         f.close()
     else:
@@ -827,7 +1040,7 @@ def main():
     for i in f.readlines():
         try:
             i = i.replace('\n', '')
-            #i = i.decode('cp949')
+            # i = i.decode('cp949')
 
             if len(i) > 10:
                 if i.find('exart') == -1:
@@ -844,7 +1057,7 @@ def main():
     for i in f.readlines():
         try:
             i = i.replace('\n', '')
-            #i = i.decode('cp949')
+            # i = i.decode('cp949')
             if os.path.isfile(i) and i.lower().find('winsxs') == -1 and i.lower().find('microsoft.net') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
                 if os.path.getsize(i) / (1024*1024) < 20:
                     if i.find('exart') == -1:
@@ -870,7 +1083,7 @@ def main():
         for i in f.readlines():
             try:
                 i = i.replace('\n', '')
-                #i = i.decode('utf-8')
+                # i = i.decode('utf-8')
                 if os.path.isfile(i) and i.lower().find('winsxs') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
                     if os.path.getsize(i) / (1024*1024) < 20:
                         if i.find('exart') == -1:
@@ -888,7 +1101,7 @@ def main():
         for i in f.readlines():
             try:
                 i = i.replace('\n', '')
-                #i = i.decode('utf-8')
+                # i = i.decode('utf-8')
                 if os.path.isfile(i) and i.lower().find('winsxs') == -1 and len(i.split('\\')[-1]) < 21 and len(i) < 100:
                     # if os.path.getsize(i) / (1024*1024) < 20 :
                     if i.find('exart') == -1:
@@ -908,7 +1121,7 @@ def main():
             for i in f.readlines():
                 try:
                     i = i.split(',')[0]
-                    #i = i.decode('cp949')
+                    # i = i.decode('cp949')
                     replace_fname = i.replace(':', ';').replace(
                         ' ', '').replace('\\', '_').replace('\n', '')
                     if os.path.isfile('.\\artifacts\\recentfilesview\\' + replace_fname):
@@ -923,12 +1136,12 @@ def main():
                     if i.find('exart') == -1:
                         shutil.copy(i, 'artifacts\\collect_recentfilesview\\%s' %
                                     i.replace(':', '_').replace(' ', '').replace('\\', '_'))
-                        #execute_utils('utils\\forecopy.exe  -f  "%s" .\\artifact\\collect_recentfilesview' %i.encode('cp949'))
+                        # execute_utils('utils\\forecopy.exe  -f  "%s" .\\artifact\\collect_recentfilesview' %i.encode('cp949'))
                         os.rename('.\\artifacts\\collect_recentfilesview\\%s' % i.split(
                             '\\')[-1], '.\\artifacts\\collect_recentfilesview\\%s' % replace_fname)
                 except Exception as err:
                     print('  [*] ' + str(err))
-                    #cantcopyfiles.write(str(err).encode('cp949') + ' - ' + i.encode('cp949') + '\n')
+                    # cantcopyfiles.write(str(err).encode('cp949') + ' - ' + i.encode('cp949') + '\n')
                     continue
             f.close()
         else:
@@ -954,7 +1167,7 @@ def main():
     print('[+] parsing  shellbags for all user ')
     ntuserfile = glob.glob('artifacts\\registry\\*NTUSER.DAT')
     for i in ntuserfile:
-        #i = i.encode('cp949')
+        # i = i.encode('cp949')
         print(i)
         execute_utils('utils\\shellbagsparser.exe -o csv "%s" > artifacts\\shellbags\\shellbags_%s.txt' %
                       (i, i.split('\\')[-1].replace(' ', '_')))
