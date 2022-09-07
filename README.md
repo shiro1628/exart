@@ -11,12 +11,12 @@
    f. artifacts\jumplist  
    g. artifacts\scriptfiles  
    h. artifacts\copy_from_mft\access, create, modify  
-   i. artifacts\all_exe_dll
-   j. artifacts\all_log_extension_files
-   k. artifacts\recentfilesview
-   l. artifacts\collect_recentfilesview
-   m. artifacts\injected_codes
-   n. artifacts\shellbags
-   o. artifacts\special_eventlog
+   i. artifacts\all_exe_dll  
+   j. artifacts\all_log_extension_files  
+   k. artifacts\recentfilesview  
+   l. artifacts\collect_recentfilesview  
+   m. artifacts\injected_codes  
+   n. artifacts\shellbags  
+   o. artifacts\special_eventlog  
 
 3. "%TEMP%" 해쉬 수집 시 docker와 충돌 발생 docker를 종료해야함
