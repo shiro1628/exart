@@ -21,4 +21,7 @@
    n. artifacts\shellbags  
    o. artifacts\special_eventlog  
 
-3. "%TEMP%" 해쉬 수집 시 docker와 충돌 발생 docker를 종료해야함
+3. "%TEMP%" 해쉬 수집 시 docker와 충돌 발생 docker를 종료해야함 
+</br>
+
+![Untitled (7)](https://github.com/user-attachments/assets/794e9d02-1750-4638-8c36-542a6681d459)
