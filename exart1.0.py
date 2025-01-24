@@ -665,7 +665,7 @@ def main():
     workcontinue = '0'  # while 문 루프 판별
     sysmon_already = '0'
     check_mac = '0'
-    # if (len(sys.argv) == 2 and sys.argv[1] == 'linegames1!'):
+    # if (len(sys.argv) == 2 and sys.argv[1] == 'shiro!@'):
     install_sysmon = '0'
     getlogfile = '0'
     getalllogfile = '0'
@@ -682,7 +682,7 @@ def main():
     print('\n############################################################################')
     print('[*] plz administrator cmd excute.')
     print('[*] Make sure you have enough capacity.')
-    print('[*] exart ver 1.0   by shiro1628@line.games')
+    print('[*] exart ver 1.0   by shiro')
     print('############################################################################\n')
 
     while(workcontinue == '0'):
@@ -706,7 +706,7 @@ def main():
         check_password = input(
             '[+] plz, input password : ')
 
-        if check_password == 'linegames1!':
+        if check_password == 'shiro!@':
             check_password = '1'
             break
         else:
