@@ -166,3 +166,7 @@ python3 -m exart --list-modules --os linux
 Python 3.6 문법을 지킨다(dataclass, `:=`, `capture_output` 금지).
 
 변경 내역: `CHANGELOG.md`. Windows 실기 점검 절차: `docs/WINDOWS_TEST.md`.
+
+## 라이선스
+
+exart 코드는 MIT 라이선스다(`LICENSE`). `tools/` 아래 외부 도구는 각 배포처의 라이선스를 따르며 이 저장소에 포함하지 않는다.
