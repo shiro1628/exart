@@ -1,0 +1,197 @@
+<svg class="rich-terminal" viewBox="0 0 1434 879.5999999999999" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-3650757777-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-3650757777-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-3650757777-r1 { fill: #7ee787;font-weight: bold }
+.terminal-3650757777-r2 { fill: #c5c8c6;font-weight: bold }
+.terminal-3650757777-r3 { fill: #c5c8c6 }
+.terminal-3650757777-r4 { fill: #79c0ff;font-weight: bold }
+.terminal-3650757777-r5 { fill: #8b949e }
+.terminal-3650757777-r6 { fill: #79c0ff }
+.terminal-3650757777-r7 { fill: #7ee787 }
+.terminal-3650757777-r8 { fill: #e3b341 }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-3650757777-clip-terminal">
+      <rect x="0" y="0" width="1414.1999999999998" height="828.5999999999999" />
+    </clipPath>
+    <clipPath id="terminal-3650757777-line-0">
+    <rect x="0" y="1.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-1">
+    <rect x="0" y="25.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-2">
+    <rect x="0" y="50.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-3">
+    <rect x="0" y="74.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-4">
+    <rect x="0" y="99.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-5">
+    <rect x="0" y="123.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-6">
+    <rect x="0" y="147.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-7">
+    <rect x="0" y="172.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-8">
+    <rect x="0" y="196.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-9">
+    <rect x="0" y="221.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-10">
+    <rect x="0" y="245.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-11">
+    <rect x="0" y="269.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-12">
+    <rect x="0" y="294.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-13">
+    <rect x="0" y="318.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-14">
+    <rect x="0" y="343.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-15">
+    <rect x="0" y="367.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-16">
+    <rect x="0" y="391.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-17">
+    <rect x="0" y="416.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-18">
+    <rect x="0" y="440.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-19">
+    <rect x="0" y="465.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-20">
+    <rect x="0" y="489.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-21">
+    <rect x="0" y="513.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-22">
+    <rect x="0" y="538.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-23">
+    <rect x="0" y="562.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-24">
+    <rect x="0" y="587.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-25">
+    <rect x="0" y="611.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-26">
+    <rect x="0" y="635.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-27">
+    <rect x="0" y="660.3" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-28">
+    <rect x="0" y="684.7" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-29">
+    <rect x="0" y="709.1" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-30">
+    <rect x="0" y="733.5" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-31">
+    <rect x="0" y="757.9" width="1415.2" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3650757777-line-32">
+    <rect x="0" y="782.3" width="1415.2" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1432" height="877.6" rx="8"/><text class="terminal-3650757777-title" fill="#c5c8c6" text-anchor="middle" x="716" y="27">exart</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-3650757777-clip-terminal)">
+    
+    <g class="terminal-3650757777-matrix">
+    <text class="terminal-3650757777-r1" x="0" y="20" textLength="268.4" clip-path="url(#terminal-3650757777-line-0)">root@web01:/opt/exart#</text><text class="terminal-3650757777-r2" x="268.4" y="20" textLength="951.6" clip-path="url(#terminal-3650757777-line-0)">&#160;./exart-linux-aarch64&#160;-o&#160;/mnt/usb&#160;--case-id&#160;IR-2026-001&#160;--since&#160;2026-10-01&#160;-y</text><text class="terminal-3650757777-r3" x="1415.2" y="20" textLength="12.2" clip-path="url(#terminal-3650757777-line-0)">
+</text><text class="terminal-3650757777-r4" x="0" y="44.4" textLength="878.4" clip-path="url(#terminal-3650757777-line-1)">========================================================================</text><text class="terminal-3650757777-r3" x="1415.2" y="44.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-1)">
+</text><text class="terminal-3650757777-r4" x="0" y="68.8" textLength="414.8" clip-path="url(#terminal-3650757777-line-2)">&#160;exart&#160;2.0.0&#160;—&#160;라이브&#160;아티팩트&#160;수집&#160;(linux)</text><text class="terminal-3650757777-r3" x="1415.2" y="68.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-2)">
+</text><text class="terminal-3650757777-r4" x="0" y="93.2" textLength="878.4" clip-path="url(#terminal-3650757777-line-3)">========================================================================</text><text class="terminal-3650757777-r3" x="1415.2" y="93.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-3)">
+</text><text class="terminal-3650757777-r3" x="0" y="117.6" textLength="634.4" clip-path="url(#terminal-3650757777-line-4)">&#160;결과&#160;폴더&#160;:&#160;/mnt/usb/IR-2026-001_web01_20261008T035341Z</text><text class="terminal-3650757777-r3" x="1415.2" y="117.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-4)">
+</text><text class="terminal-3650757777-r3" x="0" y="142" textLength="549" clip-path="url(#terminal-3650757777-line-5)">&#160;프로필&#160;&#160;&#160;&#160;:&#160;standard&#160;&#160;&#160;메모리&#160;덤프:&#160;아니오&#160;&#160;&#160;파일&#160;상한:&#160;20M</text><text class="terminal-3650757777-r3" x="1415.2" y="142" textLength="12.2" clip-path="url(#terminal-3650757777-line-5)">
+</text><text class="terminal-3650757777-r3" x="0" y="166.4" textLength="475.8" clip-path="url(#terminal-3650757777-line-6)">&#160;기간&#160;&#160;&#160;&#160;&#160;&#160;:&#160;2026-10-01&#160;00:00:00&#160;KST&#160;~&#160;지금</text><text class="terminal-3650757777-r3" x="1415.2" y="166.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-6)">
+</text><text class="terminal-3650757777-r3" x="0" y="190.8" textLength="134.2" clip-path="url(#terminal-3650757777-line-7)">&#160;관리자&#160;&#160;&#160;&#160;:&#160;예</text><text class="terminal-3650757777-r3" x="1415.2" y="190.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-7)">
+</text><text class="terminal-3650757777-r3" x="0" y="215.2" textLength="1073.6" clip-path="url(#terminal-3650757777-line-8)">&#160;모듈&#160;&#160;&#160;&#160;&#160;&#160;:&#160;environment,&#160;volatile,&#160;system,&#160;persistence,&#160;logs,&#160;user_activity,&#160;hashes,&#160;suid</text><text class="terminal-3650757777-r3" x="1415.2" y="215.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-8)">
+</text><text class="terminal-3650757777-r3" x="0" y="239.6" textLength="183" clip-path="url(#terminal-3650757777-line-9)">&#160;남은&#160;공간&#160;:&#160;3.9&#160;GB</text><text class="terminal-3650757777-r3" x="1415.2" y="239.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-9)">
+</text><text class="terminal-3650757777-r3" x="0" y="264" textLength="585.6" clip-path="url(#terminal-3650757777-line-10)">&#160;수집&#160;결과에는&#160;악성&#160;실행&#160;파일이&#160;들어갈&#160;수&#160;있습니다.&#160;분석은&#160;격리&#160;환경에서만&#160;하세요.</text><text class="terminal-3650757777-r3" x="1415.2" y="264" textLength="12.2" clip-path="url(#terminal-3650757777-line-10)">
+</text><text class="terminal-3650757777-r5" x="0" y="288.4" textLength="280.6" clip-path="url(#terminal-3650757777-line-11)">2026-10-08&#160;12:53:41&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="288.4" textLength="36.6" clip-path="url(#terminal-3650757777-line-11)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="288.4" textLength="158.6" clip-path="url(#terminal-3650757777-line-11)">[environment]</text><text class="terminal-3650757777-r3" x="475.8" y="288.4" textLength="402.6" clip-path="url(#terminal-3650757777-line-11)">&#160;시작&#160;—&#160;실행&#160;환경&#160;판별(컨테이너·쿠버네티스&#160;여부,&#160;권한)</text><text class="terminal-3650757777-r3" x="1415.2" y="288.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-11)">
+</text><text class="terminal-3650757777-r5" x="0" y="312.8" textLength="280.6" clip-path="url(#terminal-3650757777-line-12)">2026-10-08&#160;12:53:41&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="312.8" textLength="36.6" clip-path="url(#terminal-3650757777-line-12)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="312.8" textLength="158.6" clip-path="url(#terminal-3650757777-line-12)">[environment]</text><text class="terminal-3650757777-r3" x="475.8" y="312.8" textLength="317.2" clip-path="url(#terminal-3650757777-line-12)">&#160;컨테이너&#160;환경으로&#160;보임:&#160;/.dockerenv</text><text class="terminal-3650757777-r3" x="1415.2" y="312.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-12)">
+</text><text class="terminal-3650757777-r5" x="0" y="337.2" textLength="280.6" clip-path="url(#terminal-3650757777-line-13)">2026-10-08&#160;12:53:41&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="337.2" textLength="36.6" clip-path="url(#terminal-3650757777-line-13)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="337.2" textLength="158.6" clip-path="url(#terminal-3650757777-line-13)">[environment]</text><text class="terminal-3650757777-r7" x="488" y="337.2" textLength="24.4" clip-path="url(#terminal-3650757777-line-13)">ok</text><text class="terminal-3650757777-r3" x="512.4" y="337.2" textLength="158.6" clip-path="url(#terminal-3650757777-line-13)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="337.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-13)">
+</text><text class="terminal-3650757777-r5" x="0" y="361.6" textLength="280.6" clip-path="url(#terminal-3650757777-line-14)">2026-10-08&#160;12:53:41&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="361.6" textLength="36.6" clip-path="url(#terminal-3650757777-line-14)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="361.6" textLength="122" clip-path="url(#terminal-3650757777-line-14)">[volatile]</text><text class="terminal-3650757777-r3" x="439.2" y="361.6" textLength="463.6" clip-path="url(#terminal-3650757777-line-14)">&#160;시작&#160;—&#160;프로세스(/proc)·소켓·세션·커널&#160;모듈&#160;등&#160;휘발성&#160;정보</text><text class="terminal-3650757777-r3" x="1415.2" y="361.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-14)">
+</text><text class="terminal-3650757777-r8" x="0" y="386" textLength="1085.8" clip-path="url(#terminal-3650757777-line-15)">2026-10-08&#160;12:53:41&#160;KST&#160;W&#160;[volatile]&#160;의심&#160;프로세스&#160;pid=17&#160;exe=/var/tmp/.cache/kworker&#160;(deleted)</text><text class="terminal-3650757777-r3" x="1415.2" y="386" textLength="12.2" clip-path="url(#terminal-3650757777-line-15)">
+</text><text class="terminal-3650757777-r5" x="0" y="410.4" textLength="280.6" clip-path="url(#terminal-3650757777-line-16)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="410.4" textLength="36.6" clip-path="url(#terminal-3650757777-line-16)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="410.4" textLength="122" clip-path="url(#terminal-3650757777-line-16)">[volatile]</text><text class="terminal-3650757777-r7" x="451.4" y="410.4" textLength="24.4" clip-path="url(#terminal-3650757777-line-16)">ok</text><text class="terminal-3650757777-r3" x="475.8" y="410.4" textLength="158.6" clip-path="url(#terminal-3650757777-line-16)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="410.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-16)">
+</text><text class="terminal-3650757777-r5" x="0" y="434.8" textLength="280.6" clip-path="url(#terminal-3650757777-line-17)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="434.8" textLength="36.6" clip-path="url(#terminal-3650757777-line-17)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="434.8" textLength="97.6" clip-path="url(#terminal-3650757777-line-17)">[system]</text><text class="terminal-3650757777-r3" x="414.8" y="434.8" textLength="622.2" clip-path="url(#terminal-3650757777-line-17)">&#160;시작&#160;—&#160;시스템·계정&#160;정보(passwd,&#160;가려진&#160;shadow,&#160;로그인&#160;기록,&#160;패키지&#160;목록)</text><text class="terminal-3650757777-r3" x="1415.2" y="434.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-17)">
+</text><text class="terminal-3650757777-r5" x="0" y="459.2" textLength="280.6" clip-path="url(#terminal-3650757777-line-18)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="459.2" textLength="36.6" clip-path="url(#terminal-3650757777-line-18)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="459.2" textLength="97.6" clip-path="url(#terminal-3650757777-line-18)">[system]</text><text class="terminal-3650757777-r7" x="427" y="459.2" textLength="24.4" clip-path="url(#terminal-3650757777-line-18)">ok</text><text class="terminal-3650757777-r3" x="451.4" y="459.2" textLength="158.6" clip-path="url(#terminal-3650757777-line-18)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="459.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-18)">
+</text><text class="terminal-3650757777-r5" x="0" y="483.6" textLength="280.6" clip-path="url(#terminal-3650757777-line-19)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="483.6" textLength="36.6" clip-path="url(#terminal-3650757777-line-19)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="483.6" textLength="158.6" clip-path="url(#terminal-3650757777-line-19)">[persistence]</text><text class="terminal-3650757777-r3" x="475.8" y="483.6" textLength="793" clip-path="url(#terminal-3650757777-line-19)">&#160;시작&#160;—&#160;자동&#160;실행(cron,&#160;systemd,&#160;init,&#160;셸&#160;설정,&#160;ld.so.preload,&#160;PAM,&#160;SSH&#160;키)</text><text class="terminal-3650757777-r3" x="1415.2" y="483.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-19)">
+</text><text class="terminal-3650757777-r5" x="0" y="508" textLength="280.6" clip-path="url(#terminal-3650757777-line-20)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="508" textLength="36.6" clip-path="url(#terminal-3650757777-line-20)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="508" textLength="158.6" clip-path="url(#terminal-3650757777-line-20)">[persistence]</text><text class="terminal-3650757777-r7" x="488" y="508" textLength="24.4" clip-path="url(#terminal-3650757777-line-20)">ok</text><text class="terminal-3650757777-r3" x="512.4" y="508" textLength="158.6" clip-path="url(#terminal-3650757777-line-20)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="508" textLength="12.2" clip-path="url(#terminal-3650757777-line-20)">
+</text><text class="terminal-3650757777-r5" x="0" y="532.4" textLength="280.6" clip-path="url(#terminal-3650757777-line-21)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="532.4" textLength="36.6" clip-path="url(#terminal-3650757777-line-21)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="532.4" textLength="73.2" clip-path="url(#terminal-3650757777-line-21)">[logs]</text><text class="terminal-3650757777-r3" x="390.4" y="532.4" textLength="610" clip-path="url(#terminal-3650757777-line-21)">&#160;시작&#160;—&#160;로그(/var/log,&#160;journal&#160;텍스트,&#160;full이면&#160;journal&#160;원본)</text><text class="terminal-3650757777-r3" x="1415.2" y="532.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-21)">
+</text><text class="terminal-3650757777-r5" x="0" y="556.8" textLength="280.6" clip-path="url(#terminal-3650757777-line-22)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="556.8" textLength="36.6" clip-path="url(#terminal-3650757777-line-22)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="556.8" textLength="73.2" clip-path="url(#terminal-3650757777-line-22)">[logs]</text><text class="terminal-3650757777-r7" x="402.6" y="556.8" textLength="24.4" clip-path="url(#terminal-3650757777-line-22)">ok</text><text class="terminal-3650757777-r3" x="427" y="556.8" textLength="158.6" clip-path="url(#terminal-3650757777-line-22)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="556.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-22)">
+</text><text class="terminal-3650757777-r5" x="0" y="581.2" textLength="280.6" clip-path="url(#terminal-3650757777-line-23)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="581.2" textLength="36.6" clip-path="url(#terminal-3650757777-line-23)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="581.2" textLength="183" clip-path="url(#terminal-3650757777-line-23)">[user_activity]</text><text class="terminal-3650757777-r3" x="500.2" y="581.2" textLength="366" clip-path="url(#terminal-3650757777-line-23)">&#160;시작&#160;—&#160;사용자&#160;흔적(셸·도구&#160;기록,&#160;웹&#160;루트&#160;목록)</text><text class="terminal-3650757777-r3" x="1415.2" y="581.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-23)">
+</text><text class="terminal-3650757777-r5" x="0" y="605.6" textLength="280.6" clip-path="url(#terminal-3650757777-line-24)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="605.6" textLength="36.6" clip-path="url(#terminal-3650757777-line-24)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="605.6" textLength="183" clip-path="url(#terminal-3650757777-line-24)">[user_activity]</text><text class="terminal-3650757777-r7" x="512.4" y="605.6" textLength="24.4" clip-path="url(#terminal-3650757777-line-24)">ok</text><text class="terminal-3650757777-r3" x="536.8" y="605.6" textLength="158.6" clip-path="url(#terminal-3650757777-line-24)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="605.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-24)">
+</text><text class="terminal-3650757777-r5" x="0" y="630" textLength="280.6" clip-path="url(#terminal-3650757777-line-25)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="630" textLength="36.6" clip-path="url(#terminal-3650757777-line-25)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="630" textLength="97.6" clip-path="url(#terminal-3650757777-line-25)">[hashes]</text><text class="terminal-3650757777-r3" x="414.8" y="630" textLength="683.2" clip-path="url(#terminal-3650757777-line-25)">&#160;시작&#160;—&#160;임시&#160;폴더(/tmp,&#160;/var/tmp,&#160;/dev/shm)&#160;해시&#160;목록과&#160;ELF·스크립트&#160;수집</text><text class="terminal-3650757777-r3" x="1415.2" y="630" textLength="12.2" clip-path="url(#terminal-3650757777-line-25)">
+</text><text class="terminal-3650757777-r5" x="0" y="654.4" textLength="280.6" clip-path="url(#terminal-3650757777-line-26)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="654.4" textLength="36.6" clip-path="url(#terminal-3650757777-line-26)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="654.4" textLength="97.6" clip-path="url(#terminal-3650757777-line-26)">[hashes]</text><text class="terminal-3650757777-r3" x="414.8" y="654.4" textLength="146.4" clip-path="url(#terminal-3650757777-line-26)">&#160;임시&#160;폴더&#160;항목&#160;2개</text><text class="terminal-3650757777-r3" x="1415.2" y="654.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-26)">
+</text><text class="terminal-3650757777-r5" x="0" y="678.8" textLength="280.6" clip-path="url(#terminal-3650757777-line-27)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="678.8" textLength="36.6" clip-path="url(#terminal-3650757777-line-27)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="678.8" textLength="97.6" clip-path="url(#terminal-3650757777-line-27)">[hashes]</text><text class="terminal-3650757777-r7" x="427" y="678.8" textLength="24.4" clip-path="url(#terminal-3650757777-line-27)">ok</text><text class="terminal-3650757777-r3" x="451.4" y="678.8" textLength="158.6" clip-path="url(#terminal-3650757777-line-27)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="678.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-27)">
+</text><text class="terminal-3650757777-r5" x="0" y="703.2" textLength="280.6" clip-path="url(#terminal-3650757777-line-28)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="703.2" textLength="36.6" clip-path="url(#terminal-3650757777-line-28)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="703.2" textLength="73.2" clip-path="url(#terminal-3650757777-line-28)">[suid]</text><text class="terminal-3650757777-r3" x="390.4" y="703.2" textLength="292.8" clip-path="url(#terminal-3650757777-line-28)">&#160;시작&#160;—&#160;SUID/SGID&#160;파일&#160;목록·해시</text><text class="terminal-3650757777-r3" x="1415.2" y="703.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-28)">
+</text><text class="terminal-3650757777-r5" x="0" y="727.6" textLength="280.6" clip-path="url(#terminal-3650757777-line-29)">2026-10-08&#160;12:53:42&#160;KST</text><text class="terminal-3650757777-r3" x="280.6" y="727.6" textLength="36.6" clip-path="url(#terminal-3650757777-line-29)">&#160;I&#160;</text><text class="terminal-3650757777-r6" x="317.2" y="727.6" textLength="73.2" clip-path="url(#terminal-3650757777-line-29)">[suid]</text><text class="terminal-3650757777-r7" x="402.6" y="727.6" textLength="24.4" clip-path="url(#terminal-3650757777-line-29)">ok</text><text class="terminal-3650757777-r3" x="427" y="727.6" textLength="158.6" clip-path="url(#terminal-3650757777-line-29)">&#160;(0.0s,&#160;오류&#160;0)</text><text class="terminal-3650757777-r3" x="1415.2" y="727.6" textLength="12.2" clip-path="url(#terminal-3650757777-line-29)">
+</text><text class="terminal-3650757777-r3" x="1415.2" y="752" textLength="12.2" clip-path="url(#terminal-3650757777-line-30)">
+</text><text class="terminal-3650757777-r1" x="0" y="776.4" textLength="671" clip-path="url(#terminal-3650757777-line-31)">web01&#160;linux&#160;수집&#160;completed:&#160;파일&#160;69개(0.5&#160;MB),&#160;명령&#160;13회,&#160;오류&#160;0건</text><text class="terminal-3650757777-r3" x="1415.2" y="776.4" textLength="12.2" clip-path="url(#terminal-3650757777-line-31)">
+</text><text class="terminal-3650757777-r3" x="0" y="800.8" textLength="634.4" clip-path="url(#terminal-3650757777-line-32)">&#160;결과&#160;&#160;&#160;&#160;:&#160;/mnt/usb/IR-2026-001_web01_20261008T035341Z</text><text class="terminal-3650757777-r3" x="1415.2" y="800.8" textLength="12.2" clip-path="url(#terminal-3650757777-line-32)">
+</text><text class="terminal-3650757777-r3" x="0" y="825.2" textLength="1244.4" clip-path="url(#terminal-3650757777-line-33)">&#160;SHA256SUMS&#160;sha256&#160;=&#160;dd4c39ab5fbfc3bbe9d8a51ffd984776ba2733e132ea3ed3693e05fd52593817&#160;&#160;(사건&#160;기록에&#160;적어&#160;두세요)</text><text class="terminal-3650757777-r3" x="1415.2" y="825.2" textLength="12.2" clip-path="url(#terminal-3650757777-line-33)">
+</text>
+    </g>
+    </g>
+</svg>
