@@ -76,7 +76,7 @@ IR-2026-003_host_20261008T001411Z/
 - 실행 흔적: Prefetch, Amcache, PCA, SRUM, ShimCache
 - 사용자: PowerShell 기록, 최근 파일·점프 목록, 휴지통 $I, WebCache, 아이콘·썸네일 캐시, Timeline
 - 브라우저: Chrome/Edge/Brave/Whale/Firefox 기록·북마크·확장(쿠키·저장 비밀번호는 모으지 않음)
-- NTFS: $MFT, UsnJrnl(fsutil 파싱본), full이면 $LogFile·$J 원본
+- NTFS: $MFT, UsnJrnl(fsutil 파싱본), full이면 $LogFile·$J 원본. $MFT는 `icat`으로 읽고, icat이 없거나 실패하면 VSS 섀도 사본을 임시로 만들어 내장 파서(`exart/ntfs_raw.py`)로 읽은 뒤 섀도 사본을 지운다
 - 해시: Temp·시작 메뉴·Public·Downloads·ProgramData. full이면 웹셸·스크립트 탐색, System32 해시, 기간 내 변경 파일
 
 잠긴 파일은 일반 복사 → `icat`(파일 ID로 MFT 엔트리를 찾아 NTFS 볼륨을 직접 읽음) → `esentutl /y /vss`(볼륨 섀도 사본 임시 생성) 순서로 시도한다.
@@ -185,7 +185,7 @@ exart --verify <결과폴더>     # SHA256SUMS 대조, 모듈별 상태·오류 
 ## 운영 원칙
 
 - **결과는 외부 저장 장치에 쓴다.** 대상 디스크에 쓰면 삭제된 파일 흔적(미할당 영역)을 덮어쓴다. 시스템 볼륨이면 경고 후 멈춘다.
-- **대상 시스템을 바꾸는 동작은 최소화했다.** 모니터링 에이전트 설치 같은 변경은 하지 않는다. 남는 변경: 잠긴 파일을 icat으로 못 읽을 때의 `esentutl /vss`(임시 섀도 사본), PowerShell 스크립트 실행 기록, 도구 실행에 따른 Prefetch 생성.
+- **대상 시스템을 바꾸는 동작은 최소화했다.** 모니터링 에이전트 설치 같은 변경은 하지 않는다. 남는 변경: icat으로 못 읽을 때의 임시 섀도 사본(잠긴 파일은 `esentutl /vss`, $MFT는 WMI `Win32_ShadowCopy`로 만들고 끝나면 지움), PowerShell 스크립트 실행 기록, 도구 실행에 따른 Prefetch 생성.
 - **클라우드 동기화 파일은 읽지 않는다.** OneDrive 온라인 전용 파일과 iCloud dataless 파일은 읽는 순간 내려받기가 일어나므로 목록에만 남긴다(`cloud_placeholder`).
 - **외부로 아무것도 보내지 않는다.** VirusTotal 같은 온라인 조회는 하지 않는다. 해시 조회는 수집이 끝난 뒤 분석 환경에서 한다.
 - EDR이 수집 동작(레지스트리 하이브 저장, 메모리 덤프 등)을 탐지할 수 있다. 보안 운영 쪽에 미리 알린다.

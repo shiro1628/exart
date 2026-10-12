@@ -12,7 +12,7 @@ import glob
 import os
 import re
 
-from . import core
+from . import core, ntfs_raw
 from .core import module
 
 OS = "windows"
@@ -670,6 +670,54 @@ def app_logs(ctx):
                      [os.path.join(pd, "Microsoft", "Windows", "WER")], max_depth=3)
 
 
+def mft_from_shadow(ctx, drv, base):
+    """icat 이 없거나 실패했을 때의 보조 수단: VSS 섀도 사본을 임시로 만들어 그 장치에서 $MFT 를 읽고(ntfs_raw),
+    끝나면 섀도 사본을 지운다. 섀도 사본은 대상 볼륨의 차분 영역에 쓰기를 일으키므로 icat 다음 순서로 둔다."""
+    out = "logs/vss_create_%s.txt" % drv
+    ps(ctx, "vss_create_%s" % drv,
+       "$r = ([wmiclass]'root\\cimv2:Win32_ShadowCopy').Create(%s, 'ClientAccessible')\n"
+       "if ($r.ReturnValue -ne 0) { Write-Output ('ERROR ' + $r.ReturnValue); exit 1 }\n"
+       "$s = Get-WmiObject Win32_ShadowCopy | Where-Object { $_.ID -eq $r.ShadowID }\n"
+       "Write-Output ('ID ' + $s.ID)\n"
+       "Write-Output ('DEVICE ' + $s.DeviceObject)\n" % _psq(drv + ":\\"), out=out, timeout=600)
+    info = {}
+    try:
+        with open(ctx.path(out), encoding="utf-8-sig", errors="replace") as f:
+            for line in f:
+                k, _, v = line.strip().partition(" ")
+                info[k] = v.strip()
+    except OSError:
+        pass
+    sid, dev = info.get("ID"), info.get("DEVICE")
+    if not sid or not dev:
+        ctx.error("%s: 섀도 사본 생성 실패(%s 확인)" % (drv, out))
+        return False
+    ctx.info("%s: 섀도 사본 %s 에서 $MFT 읽는 중", drv, sid)
+    dest = ctx.path(base + "/$MFT")
+    got, detail = False, None
+    try:
+        with open(dev, "rb", buffering=0) as f, open(dest, "wb") as o:
+            detail = ntfs_raw.read_mft(f, o)
+        got = os.path.getsize(dest) > 0
+    except (OSError, ntfs_raw.NtfsError) as e:
+        ctx.error("%s: 섀도 사본에서 $MFT 읽기 실패" % drv, e)
+    finally:
+        rc = ps(ctx, "vss_delete_%s" % drv,
+                "Get-WmiObject Win32_ShadowCopy | Where-Object { $_.ID -eq %s } | ForEach-Object { $_.Delete() }\n"
+                "if (Get-WmiObject Win32_ShadowCopy | Where-Object { $_.ID -eq %s }) { Write-Output 'STILL_PRESENT'; exit 1 }\n"
+                % (_psq(sid), _psq(sid)), out="logs/vss_delete_%s.txt" % drv, timeout=600)
+        if rc != 0:
+            ctx.error("%s: 섀도 사본 %s 삭제 실패 — 수동으로 지운다: vssadmin delete shadows /shadow=%s /quiet"
+                      % (drv, sid, sid))
+    if got:
+        ctx.record_external(dest, "%s:\\$MFT" % drv, "vss-raw",
+                            note="shadow %s, %d runs, %d extension records"
+                                 % (sid, detail["runs"], detail["extension_records"]))
+    elif os.path.exists(dest):
+        os.remove(dest)
+    return got
+
+
 @module(OS, "ntfs", "NTFS 메타데이터($MFT, UsnJrnl, full이면 $LogFile·$J 원본)", level="standard", order=100, admin=True)
 def ntfs(ctx):
     icat = ctx.tool("icat.exe")
@@ -690,7 +738,9 @@ def ntfs(ctx):
                         os.remove(p)
                 ctx.hashed.pop(base + "/$MFT", None)
         if not got_mft and not ctx.dry_run:
-            ctx.error("%s: $MFT 수집 실패 — icat 이 없거나 실패(관리자 권한 필요, *.stderr 확인)" % drv)
+            got_mft = mft_from_shadow(ctx, drv, base)
+        if not got_mft and not ctx.dry_run:
+            ctx.error("%s: $MFT 수집 실패 — icat·섀도 사본 모두 실패(관리자 권한 필요, logs/ 확인)" % drv)
         # UsnJrnl: fsutil 파싱본(내장, 기본) + full이면 원본 $J
         ctx.run([fsutil, "usn", "readjournal", drv + ":", "csv"], "ntfs/%s_usnjrnl.csv" % drv, timeout=7200)
         if ctx.at_least("full") and icat and fls and not ctx.dry_run:

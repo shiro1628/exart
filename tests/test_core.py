@@ -11,7 +11,7 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from exart import core, linux  # noqa: E402
+from exart import core, linux, ntfs_raw  # noqa: E402
 from exart import cli  # noqa: E402,F401  (모듈 등록 확인용)
 
 
@@ -229,6 +229,58 @@ class LinuxParsers(unittest.TestCase):
         self.assertIn("root:<redacted:6>:19000", out)
         self.assertIn("bin:*:", out)
         self.assertIn("bob:!<redacted:y>:", out)
+
+
+def _ntfs_image():
+    """클러스터 4096, MFT 레코드 1024, $MFT 가 LCN 2 와 5 의 두 조각(크기 6000)인 최소 이미지."""
+    img = bytearray(4096 * 8)
+    for c in range(8):
+        img[c * 4096:(c + 1) * 4096] = bytes([0x40 + c]) * 4096
+    boot = bytearray(512)
+    boot[3:11] = b"NTFS    "
+    struct.pack_into("<HB", boot, 0x0B, 512, 8)
+    struct.pack_into("<Q", boot, 0x30, 2)
+    struct.pack_into("<b", boot, 0x40, -10)
+    img[0:512] = boot
+    rec = bytearray(1024)
+    rec[0:4] = b"FILE"
+    struct.pack_into("<HHH", rec, 4, 0x30, 3, 0)
+    struct.pack_into("<H", rec, 0x14, 0x38)
+    attr = bytearray(0x48)
+    struct.pack_into("<IIBB", attr, 0, 0x80, 0x48, 1, 0)
+    struct.pack_into("<QQH", attr, 0x10, 0, 1, 0x40)
+    struct.pack_into("<QQQ", attr, 0x28, 8192, 6000, 6000)
+    attr[0x40:0x47] = b"\x11\x01\x02\x11\x01\x03\x00"
+    rec[0x38:0x38 + 0x48] = attr
+    struct.pack_into("<I", rec, 0x38 + 0x48, 0xFFFFFFFF)
+    rec[0x30:0x32] = b"\x07\x00"                       # USN
+    for i in (1, 2):                                     # 섹터 끝 2바이트를 fixup 배열로 옮긴다
+        rec[0x30 + i * 2:0x32 + i * 2] = rec[i * 512 - 2:i * 512]
+        rec[i * 512 - 2:i * 512] = b"\x07\x00"
+    img[8192:8192 + 1024] = rec
+    return img
+
+
+class NtfsRaw(unittest.TestCase):
+    def test_read_fragmented_mft(self):
+        import io
+        img = _ntfs_image()
+        out = io.BytesIO()
+        info = ntfs_raw.read_mft(io.BytesIO(bytes(img)), out)
+        self.assertEqual(info["runs"], 2)
+        self.assertEqual(out.getvalue(), bytes(img[8192:12288] + img[20480:20480 + 6000 - 4096]))
+
+    def test_not_ntfs(self):
+        import io
+        with self.assertRaises(ntfs_raw.NtfsError):
+            ntfs_raw.read_mft(io.BytesIO(bytes(8192)), io.BytesIO())
+
+    def test_fixup_mismatch(self):
+        import io
+        img = _ntfs_image()
+        img[8192 + 510] ^= 0xFF
+        with self.assertRaises(ntfs_raw.NtfsError):
+            ntfs_raw.read_mft(io.BytesIO(bytes(img)), io.BytesIO())
 
 
 if __name__ == "__main__":

@@ -31,6 +31,7 @@ E:\exart-windows-x64\exart-windows-x64.exe --verify (Get-ChildItem E:\test -Dire
 | `volatile\image_signatures.csv` | Status 열이 Valid/NotSigned 등으로 채워짐 | |
 | `files\execution\amcache\` | Amcache.hve (manifest `method`가 icat 또는 esentutl-vss) | |
 | `files\ntfs\C\$MFT` | 수백 MB 이상, `ntfs\C_usnjrnl.csv` 생성 | |
+| $MFT 보조 수집(VSS) | `tools\windows\icat.exe` 이름을 잠시 바꾸고 `--modules ntfs` 실행 → manifest `method`가 `vss-raw`, 크기가 icat 결과와 비슷, `logs\vss_delete_C.txt`에 오류 없음, 실행 뒤 `vssadmin list shadows`에 남은 사본 없음 | |
 | `persistence\autoruns.csv` | autorunsc 결과(UTF-16) | |
 | 콘솔 출력 | 한글이 깨지거나 멈추지 않음(일본어 Windows면 특히) | |
 | 소요 시간 | 기록 | |
