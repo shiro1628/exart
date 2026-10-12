@@ -1,5 +1,10 @@
 # 변경 내역
 
+## 미출시
+- Windows: 잠긴 파일 복사와 $MFT 대체 수집에서 forecopy_handy를 뺐다(공식 배포처 없음).
+  잠긴 파일은 The Sleuth Kit `icat`으로 파일 ID(MFT 엔트리 번호)를 지정해 볼륨에서 직접 읽는다.
+- 외부 도구 다운로드 링크와 빌드 가이드(`docs/BUILD.md`)를 추가했다.
+
 ## 2.0.0
 - Windows·macOS·Linux 수집기를 공통 코어 위에 다시 작성. 표준 라이브러리만 사용(Python 3.6+).
 - 증거 무결성: 파일별 원본 메타데이터·SHA-256·MD5(manifest.jsonl), 명령 기록(commands.jsonl),

@@ -79,7 +79,7 @@ IR-2026-003_host_20261008T001411Z/
 - NTFS: $MFT, UsnJrnl(fsutil 파싱본), full이면 $LogFile·$J 원본
 - 해시: Temp·시작 메뉴·Public·Downloads·ProgramData. full이면 웹셸·스크립트 탐색, System32 해시, 기간 내 변경 파일
 
-잠긴 파일은 일반 복사 → `esentutl /y /vss`(볼륨 섀도 사본 임시 생성) → `forecopy -f` 순서로 시도한다.
+잠긴 파일은 일반 복사 → `icat`(파일 ID로 MFT 엔트리를 찾아 NTFS 볼륨을 직접 읽음) → `esentutl /y /vss`(볼륨 섀도 사본 임시 생성) 순서로 시도한다.
 
 **macOS** (`exart/macos.py`)
 - 휘발성: ps, lsof, netstat, DNS·프록시, launchctl, 커널·시스템 확장
@@ -164,8 +164,7 @@ exart는 대부분을 OS 내장 명령으로 수집하고, 아래 도구는 **�
 |---|---|---|---|
 | Windows | WinPmem mini v4.0.rc1 | memory | https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1 |
 | Windows | Sysinternals Autoruns (autorunsc) | persistence | https://learn.microsoft.com/sysinternals/downloads/autoruns |
-| Windows | The Sleuth Kit (icat, fls) | ntfs | https://www.sleuthkit.org/sleuthkit/download.php |
-| Windows | forecopy_handy | ntfs, 잠긴 파일 | 공식 배포처 없음. `tools/windows/README.md`의 SHA-256과 대조 |
+| Windows | The Sleuth Kit (icat, fls) | ntfs, 잠긴 파일 | https://www.sleuthkit.org/sleuthkit/download.php |
 | Windows | ShimCacheParser | execution | https://github.com/mandiant/ShimCacheParser (실행 파일로 빌드해서 사용) |
 | Windows | NirSoft BrowsingHistoryView, ChromeCacheView, IECacheView, MozillaCacheView, ExecutedProgramsList | browsers, execution | https://www.nirsoft.net/utils/browsing_history_view.html 외 ([목록](tools/windows/README.md)) |
 | Linux | Microsoft AVML v0.20.0 | memory | https://github.com/microsoft/avml/releases/tag/v0.20.0 |
@@ -186,7 +185,7 @@ exart --verify <결과폴더>     # SHA256SUMS 대조, 모듈별 상태·오류 
 ## 운영 원칙
 
 - **결과는 외부 저장 장치에 쓴다.** 대상 디스크에 쓰면 삭제된 파일 흔적(미할당 영역)을 덮어쓴다. 시스템 볼륨이면 경고 후 멈춘다.
-- **대상 시스템을 바꾸는 동작은 최소화했다.** 모니터링 에이전트 설치 같은 변경은 하지 않는다. 남는 변경: 잠긴 파일을 forecopy로 못 읽을 때의 `esentutl /vss`(임시 섀도 사본), PowerShell 스크립트 실행 기록, 도구 실행에 따른 Prefetch 생성.
+- **대상 시스템을 바꾸는 동작은 최소화했다.** 모니터링 에이전트 설치 같은 변경은 하지 않는다. 남는 변경: 잠긴 파일을 icat으로 못 읽을 때의 `esentutl /vss`(임시 섀도 사본), PowerShell 스크립트 실행 기록, 도구 실행에 따른 Prefetch 생성.
 - **클라우드 동기화 파일은 읽지 않는다.** OneDrive 온라인 전용 파일과 iCloud dataless 파일은 읽는 순간 내려받기가 일어나므로 목록에만 남긴다(`cloud_placeholder`).
 - **외부로 아무것도 보내지 않는다.** VirusTotal 같은 온라인 조회는 하지 않는다. 해시 조회는 수집이 끝난 뒤 분석 환경에서 한다.
 - EDR이 수집 동작(레지스트리 하이브 저장, 메모리 덤프 등)을 탐지할 수 있다. 보안 운영 쪽에 미리 알린다.

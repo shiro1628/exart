@@ -29,7 +29,7 @@ E:\exart-windows-x64\exart-windows-x64.exe --verify (Get-ChildItem E:\test -Dire
 | `eventlogs_filtered\logon__Security.txt` | 최근 4624 이벤트가 텍스트로 보임 | |
 | `volatile\processes.csv`, `tcp_connections.csv` | 한글 경로·사용자명이 깨지지 않음 | |
 | `volatile\image_signatures.csv` | Status 열이 Valid/NotSigned 등으로 채워짐 | |
-| `files\execution\amcache\` | Amcache.hve (esentutl-vss 또는 forecopy로 복사) | |
+| `files\execution\amcache\` | Amcache.hve (manifest `method`가 icat 또는 esentutl-vss) | |
 | `files\ntfs\C\$MFT` | 수백 MB 이상, `ntfs\C_usnjrnl.csv` 생성 | |
 | `persistence\autoruns.csv` | autorunsc 결과(UTF-16) | |
 | 콘솔 출력 | 한글이 깨지거나 멈추지 않음(일본어 Windows면 특히) | |

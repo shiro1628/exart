@@ -3,9 +3,9 @@
 
 가능하면 OS 내장 기능만 쓴다: 이벤트 로그 wevtutil, 서명 확인 Get-AuthenticodeSignature,
 레지스트리 reg save, 해시는 자체 계산, 파일 탐색은 직접 순회.
-잠긴 파일은 일반 복사 → forecopy -f → esentutl /vss 순서로 시도한다.
+잠긴 파일은 일반 복사 → icat(NTFS 직접 읽기) → esentutl /vss 순서로 시도한다.
 외부 도구(tools/windows)는 있으면 쓰고 없으면 건너뛴다: winpmem, icat/fls,
-forecopy, ShimCacheParser, autorunsc, NirSoft 뷰어.
+ShimCacheParser, autorunsc, NirSoft 뷰어.
 """
 import csv
 import glob
@@ -139,7 +139,8 @@ def fixed_drives():
 
 
 def copy_locked(ctx, src, category):
-    """사용 중이라 잠긴 파일: 일반 복사 → forecopy -f(NTFS 직접 읽기) → esentutl /vss 순서로 시도.
+    """사용 중이라 잠긴 파일: 일반 복사 → icat(NTFS 직접 읽기) → esentutl /vss 순서로 시도.
+    icat 은 os.stat 의 파일 ID(하위 48비트가 MFT 엔트리 번호)로 볼륨을 직접 읽어 잠금과 무관하다.
     esentutl /vss 는 볼륨 섀도 사본을 만들며 대상 볼륨에 쓰기 때문에 마지막 수단으로 둔다."""
     e = ctx.copy(src, category, record_failure=False, max_size=0)
     if e.get("status") in ("ok", "skipped", "dry_run") or not os.path.exists(src):
@@ -147,21 +148,25 @@ def copy_locked(ctx, src, category):
             ctx._record(e)
         return e
     dest = ctx.path("files/%s/%s" % (category, core.mangle(src)))
-    meta = {}
+    meta, ino = {}, 0
     try:
-        meta = core.stat_meta(os.stat(src))
+        st = os.stat(src)
+        meta, ino = core.stat_meta(st), st.st_ino
     except OSError:
         pass
     tag = core.safe_component(os.path.basename(src))
-    fc = ctx.tool("forecopy.exe", "forecopy_handy.exe")
-    if fc:
-        d = os.path.dirname(dest)
-        produced = os.path.join(d, os.path.basename(src))
-        ctx.run([fc, "-f", src, d], "logs/forecopy/%s.txt" % tag)
-        if os.path.exists(produced) and os.path.getsize(produced) > 0:
-            if os.path.normcase(produced) != os.path.normcase(dest):
-                os.replace(produced, dest)
-            return ctx.record_external(dest, src, "forecopy", meta=meta)
+    icat = ctx.tool("icat.exe")
+    drive = os.path.splitdrive(src)[0]
+    if icat and ino and re.match(r"^[A-Za-z]:$", drive):
+        entry = ino & 0xFFFFFFFFFFFF
+        rel = "files/%s/%s" % (category, core.mangle(src))
+        if ctx.run([icat, "\\\\.\\" + drive.upper(), str(entry)], rel, timeout=3600) == 0 \
+                and os.path.exists(dest) and os.path.getsize(dest) > 0:
+            return ctx.record_external(dest, src, "icat", note="MFT entry %d" % entry, meta=meta)
+        for p in (dest, dest + ".stderr"):      # 실패한 icat 출력은 증거로 남기지 않는다
+            if os.path.exists(p) and (p == dest or os.path.getsize(p) == 0):
+                os.remove(p)
+        ctx.hashed.pop(rel, None)
     esent = _sys32("esentutl.exe")
     if os.path.exists(esent):
         if os.path.exists(dest):
@@ -685,18 +690,7 @@ def ntfs(ctx):
                         os.remove(p)
                 ctx.hashed.pop(base + "/$MFT", None)
         if not got_mft and not ctx.dry_run:
-            fc = ctx.tool("forecopy.exe", "forecopy_handy.exe")
-            if fc and drv + ":" == _sysdrive().upper():
-                d = ctx.dir(base + "/forecopy")
-                ctx.run([fc, "-m", d], "logs/forecopy_mft_%s.txt" % drv, timeout=7200)
-                for root, _, files in os.walk(d):
-                    for fn in files:
-                        p = os.path.join(root, fn)
-                        if os.path.getsize(p) > 0:
-                            ctx.record_external(p, "%s:\\$MFT" % drv, "forecopy-m")
-                            got_mft = True
-        if not got_mft:
-            ctx.error("%s: $MFT 수집 실패 — icat·forecopy 가 없거나 둘 다 실패(logs/ 확인, 관리자 권한 필요)" % drv)
+            ctx.error("%s: $MFT 수집 실패 — icat 이 없거나 실패(관리자 권한 필요, *.stderr 확인)" % drv)
         # UsnJrnl: fsutil 파싱본(내장, 기본) + full이면 원본 $J
         ctx.run([fsutil, "usn", "readjournal", drv + ":", "csv"], "ntfs/%s_usnjrnl.csv" % drv, timeout=7200)
         if ctx.at_least("full") and icat and fls and not ctx.dry_run:
