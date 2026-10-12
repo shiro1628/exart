@@ -117,20 +117,39 @@ kubectl cp <ns>/<pod>:/tmp/ir ./ir -c <디버그 컨테이너 이름>
 
 ## 단일 실행 파일 (대상에 파이썬이 없을 때)
 
-`dist/`에 OS별 배포 폴더를 빌드한다(Git 제외). 실행 파일과 같은 폴더의 `tools/<os>/`에서 외부 도구를 찾는다.
-압축을 풀지 않는 onedir 형식이다. onefile 실행 파일은 실행할 때마다 대상의 임시 폴더에 런타임을 풀어 대상 디스크에 흔적을 남긴다.
-배포 전에 각 폴더의 실행 파일과 압축 파일 SHA-256을 기록해 두고, 현장에서 대조한다.
+대상에 Python 3.6 이상이 있으면 빌드할 필요가 없다. 저장소 폴더를 외부 저장 장치에 복사하고 `python3 exart_run.py`로 실행한다.
+파이썬이 없는 대상(Windows, 최소 설치 Linux 등)에 가져갈 때만 `dist/`에 OS별 배포 폴더를 빌드한다(Git 제외).
 
-| 파일 | 대상 | 빌드 |
+압축을 풀지 않는 onedir 형식이다. onefile 실행 파일은 실행할 때마다 대상의 임시 폴더에 런타임을 풀어 대상 디스크에 흔적을 남긴다.
+실행 파일은 같은 폴더의 `tools/<os>/`에서 외부 도구를 찾으므로 **배포 폴더를 통째로**(실행 파일, `_internal/`, `tools/`) 옮긴다.
+
+| 파일 | 대상 | 빌드 환경 |
 |---|---|---|
-| `exart-windows-x64.exe` | Windows 7 SP1 이상 x64 (Python 3.8 기반) | `sh packaging/build_windows_docker.sh` (Docker+Wine) 또는 Windows에서 `packaging\build_windows.ps1` |
-| `exart-macos-arm64` | Apple Silicon Mac | macOS에서 `sh packaging/build_posix.sh` |
-| `exart-linux-x86_64`, `exart-linux-aarch64` | glibc 2.31 이상(Ubuntu 20.04+, Debian 11+, RHEL 9+) | Docker `python:3.8-slim-bullseye`에서 `packaging/build_posix.sh` (아래) |
+| `exart-windows-x64.exe` | Windows 7 SP1 이상 x64 (Python 3.8 기반) | Docker+Wine, 또는 Windows |
+| `exart-macos-arm64` | Apple Silicon Mac | Apple Silicon Mac |
+| `exart-linux-x86_64`, `exart-linux-aarch64` | glibc 2.31 이상(Ubuntu 20.04+, Debian 11+, RHEL 9+) | Docker `python:3.8-slim-bullseye` |
+
+### 빌드
+
+교차 빌드는 안 되므로 각 OS·아키텍처(또는 해당 플랫폼 Docker)에서 빌드한다. 저장소 루트에서 실행하며, 빌드마다 PyInstaller 6.11.1을 받으므로 인터넷이 필요하다.
 
 ```sh
+# Windows x64 (macOS·Linux에서 Docker + Wine)
+sh packaging/build_windows_docker.sh
+
+# macOS arm64 (Mac에서 직접)
+sh packaging/build_posix.sh
+
+# Linux x86_64 (aarch64는 --platform linux/arm64)
 docker run --rm --platform linux/amd64 -v $PWD:/src:ro -v $PWD/dist:/dist python:3.8-slim-bullseye \
   sh -c 'apt-get update -qq && apt-get install -y -qq binutils && sh /src/packaging/build_posix.sh /dist'
 ```
+
+Windows에서 직접 빌드할 때는 `powershell -ExecutionPolicy Bypass -File packaging\build_windows.ps1`(Python 3.8 권장, 3.9 이상은 Windows 7 미지원).
+
+스크립트는 끝에 `--version`을 실행해 보고 압축 파일·실행 파일의 SHA-256을 출력한다. **이 값을 기록해 두고 현장에서 대조한다.**
+`tools/<os>/`의 외부 도구는 빌드할 때 배포 폴더로 복사되므로, 코드나 도구를 바꾸면 다시 빌드한다.
+결과물 구조, 빌드 뒤 확인, 문제 해결은 `docs/BUILD.md`에 있다.
 
 실행 파일이 맞지 않는 시스템(glibc가 더 오래된 RHEL 7·8, musl 기반 Alpine, Intel Mac)은 `python3 exart_run.py`로 소스를 직접 실행한다.
 RHEL 8에는 `/usr/libexec/platform-python`(3.6)이 기본으로 있다.
@@ -165,7 +184,7 @@ python3 -m exart --list-modules --os linux
 `ctx.copy`/`ctx.copy_tree`, 명령은 `ctx.run`을 써야 manifest·commands 기록과 해시가 남는다.
 Python 3.6 문법을 지킨다(dataclass, `:=`, `capture_output` 금지).
 
-변경 내역: `CHANGELOG.md`. Windows 실기 점검 절차: `docs/WINDOWS_TEST.md`.
+변경 내역: `CHANGELOG.md`. 빌드: `docs/BUILD.md`. Windows 실기 점검 절차: `docs/WINDOWS_TEST.md`.
 
 ## 라이선스
 
