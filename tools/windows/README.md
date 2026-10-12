@@ -7,12 +7,12 @@ exart는 대부분을 OS 내장 명령(wevtutil, reg, esentutl, fsutil, PowerShe
 
 | 파일 | 쓰는 모듈 | 출처 |
 |---|---|---|
-| `winpmem_mini_x64_rc2.exe`, `winpmem_mini_x86.exe` | memory | Velocidex WinPmem v4.0.rc1 (github.com/Velocidex/WinPmem/releases) |
-| `icat.exe`, `fls.exe` (+`libewf.dll`, `zlib.dll`) | ntfs | The Sleuth Kit Windows 배포판 (sleuthkit.org) |
-| `forecopy.exe` | ntfs, 잠긴 파일 | forecopy_handy (NTFS 직접 읽기 복사 도구) |
-| `ShimCacheParser.exe` | execution | Mandiant ShimCacheParser(Python)를 실행 파일로 만든 것 |
-| `BrowsingHistoryView(64).exe`, `ChromeCacheView.exe`, `IECacheView.exe`, `MozillaCacheView.exe`, `ExecutedProgramsList.exe` | browsers, execution | NirSoft (nirsoft.net) |
-| `autorunsc64.exe`, `autorunsc.exe`, `autorunsc64a.exe` | persistence | Sysinternals Autoruns (download.sysinternals.com/files/Autoruns.zip). 재배포 금지 EULA |
+| `winpmem_mini_x64_rc2.exe`, `winpmem_mini_x86.exe` | memory | [Velocidex WinPmem v4.0.rc1](https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1) |
+| `icat.exe`, `fls.exe` (+`libewf.dll`, `zlib.dll`) | ntfs | [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/download.php) Windows 배포판 ([GitHub releases](https://github.com/sleuthkit/sleuthkit/releases)) |
+| `forecopy.exe` | ntfs, 잠긴 파일 | forecopy_handy (NTFS 직접 읽기 복사 도구). 현재 유지되는 공식 배포처가 없다. 아래 SHA-256과 일치하는 사본만 쓴다 |
+| `ShimCacheParser.exe` | execution | [Mandiant ShimCacheParser](https://github.com/mandiant/ShimCacheParser)(Python)를 PyInstaller 등으로 실행 파일로 만든 것 |
+| `BrowsingHistoryView(64).exe`, `ChromeCacheView.exe`, `IECacheView.exe`, `MozillaCacheView.exe`, `ExecutedProgramsList.exe` | browsers, execution | NirSoft: [BrowsingHistoryView](https://www.nirsoft.net/utils/browsing_history_view.html), [ChromeCacheView](https://www.nirsoft.net/utils/chrome_cache_view.html), [IECacheView](https://www.nirsoft.net/utils/ie_cache_viewer.html), [MozillaCacheView](https://www.nirsoft.net/utils/mozilla_cache_viewer.html), [ExecutedProgramsList](https://www.nirsoft.net/utils/executed_programs_list.html) |
+| `autorunsc64.exe`, `autorunsc.exe`, `autorunsc64a.exe` | persistence | [Sysinternals Autoruns](https://learn.microsoft.com/sysinternals/downloads/autoruns) ([Autoruns.zip](https://download.sysinternals.com/files/Autoruns.zip)). 재배포 금지 EULA |
 
 이름이 `winpmem64.exe`/`winpmem86.exe`인 파일도 찾는다(mini 빌드를 이름만 바꾼 경우).
 
@@ -26,4 +26,5 @@ dc6a82fc6cfda792d3182e07de10adbfba42bf336ef269dbc40732c4b2ae052c  winpmem_mini_x
 093d1c6b91d280c9644635c667753e0aa0e78c656eb4082147bf30364787d96f  autorunsc64.exe (2026-06-17 빌드)
 a2394a11272ae38e7fb6ea862e783daa6d704a3d9c73a51dfe978b7692df6b1f  autorunsc.exe (2026-06-17 빌드)
 13f7ee6f51ab8d42a1d1e6812c00e174e88802412fbeaed98582c3cb443ab8ee  autorunsc64a.exe (2026-06-17 빌드)
+06cc3ca93312a8566ed48bcb6c4356e6af81a8a4122fe4b3ff4c070d08489462  forecopy.exe (forecopy_handy)
 ```

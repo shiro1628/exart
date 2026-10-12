@@ -154,6 +154,25 @@ Windows에서 직접 빌드할 때는 `powershell -ExecutionPolicy Bypass -File 
 실행 파일이 맞지 않는 시스템(glibc가 더 오래된 RHEL 7·8, musl 기반 Alpine, Intel Mac)은 `python3 exart_run.py`로 소스를 직접 실행한다.
 RHEL 8에는 `/usr/libexec/platform-python`(3.6)이 기본으로 있다.
 
+## 외부 도구
+
+exart는 대부분을 OS 내장 명령으로 수집하고, 아래 도구는 **있으면 쓰고 없으면 건너뛴다**.
+라이선스 때문에 저장소에 넣지 않으니 배포처에서 받아 `tools/<os>/`에 둔다. 파일 이름, 검증한 SHA-256, 서명 정보는 각 폴더의 README에 있다
+([windows](tools/windows/README.md), [linux](tools/linux/README.md), [macos](tools/macos/README.md)).
+
+| OS | 도구 | 쓰는 모듈 | 받는 곳 |
+|---|---|---|---|
+| Windows | WinPmem mini v4.0.rc1 | memory | https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1 |
+| Windows | Sysinternals Autoruns (autorunsc) | persistence | https://learn.microsoft.com/sysinternals/downloads/autoruns |
+| Windows | The Sleuth Kit (icat, fls) | ntfs | https://www.sleuthkit.org/sleuthkit/download.php |
+| Windows | forecopy_handy | ntfs, 잠긴 파일 | 공식 배포처 없음. `tools/windows/README.md`의 SHA-256과 대조 |
+| Windows | ShimCacheParser | execution | https://github.com/mandiant/ShimCacheParser (실행 파일로 빌드해서 사용) |
+| Windows | NirSoft BrowsingHistoryView, ChromeCacheView, IECacheView, MozillaCacheView, ExecutedProgramsList | browsers, execution | https://www.nirsoft.net/utils/browsing_history_view.html 외 ([목록](tools/windows/README.md)) |
+| Linux | Microsoft AVML v0.20.0 | memory | https://github.com/microsoft/avml/releases/tag/v0.20.0 |
+| macOS | 없음 | — | — |
+
+받은 뒤 SHA-256을 대조하고, Windows 도구는 `Get-AuthenticodeSignature`로 서명을 확인한다. 빌드할 때 `tools/<os>/`가 배포 폴더로 복사된다.
+
 ## 결과 검증
 
 ```sh
