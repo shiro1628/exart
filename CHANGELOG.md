@@ -6,6 +6,7 @@
 - Windows: $MFT 보조 수집. icat이 없거나 실패하면 VSS 섀도 사본을 임시로 만들어 내장 NTFS 파서
   (`exart/ntfs_raw.py`, 조각난 $MFT·$ATTRIBUTE_LIST 지원)로 읽고 섀도 사본을 지운다.
 - 외부 도구 다운로드 링크와 빌드 가이드(`docs/BUILD.md`)를 추가했다.
+- 외부 도구 배치 가이드(`docs/TOOLS.md`): 파일 이름, 찾는 순서, 없을 때의 동작, 확인 방법.
 
 ## 2.0.0
 - Windows·macOS·Linux 수집기를 공통 코어 위에 다시 작성. 표준 라이브러리만 사용(Python 3.6+).

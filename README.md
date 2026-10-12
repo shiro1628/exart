@@ -159,6 +159,7 @@ RHEL 8에는 `/usr/libexec/platform-python`(3.6)이 기본으로 있다.
 exart는 대부분을 OS 내장 명령으로 수집하고, 아래 도구는 **있으면 쓰고 없으면 건너뛴다**.
 라이선스 때문에 저장소에 넣지 않으니 배포처에서 받아 `tools/<os>/`에 둔다. 파일 이름, 검증한 SHA-256, 서명 정보는 각 폴더의 README에 있다
 ([windows](tools/windows/README.md), [linux](tools/linux/README.md), [macos](tools/macos/README.md)).
+파일 이름·위치·찾는 순서와 없을 때의 동작은 [docs/TOOLS.md](docs/TOOLS.md)에 정리했다.
 
 | OS | 도구 | 쓰는 모듈 | 받는 곳 |
 |---|---|---|---|

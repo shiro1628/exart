@@ -15,6 +15,9 @@ exart는 대부분을 OS 내장 명령(wevtutil, reg, esentutl, fsutil, PowerShe
 
 이름이 `winpmem64.exe`/`winpmem86.exe`인 파일도 찾는다(mini 빌드를 이름만 바꾼 경우).
 
+icat·fls는 같은 폴더의 DLL을 불러온다. TSK 배포판의 DLL을 모두 함께 두고, Visual C++ 런타임 요구 사항은
+[docs/TOOLS.md](../../docs/TOOLS.md)를 참고한다. 파일 이름·찾는 순서·없을 때의 동작도 거기에 있다.
+
 서명 체인(2026-10 확인): autorunsc는 Microsoft Code Signing PCA 2024 → Microsoft Root CA 2011, 타임스탬프는 Root CA 2010.
 winpmem_mini는 Velocidex → Sectigo RSA Code Signing CA → USERTrust RSA이며, 서명 인증서는 만료됐지만 서명 시점(2020-10-13)에는 유효했고 타임스탬프가 붙어 있다.
 
